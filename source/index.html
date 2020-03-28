@@ -12,18 +12,26 @@
           <img src="https://via.placeholder.com/33x39" width="33" height="39" alt="Cat Energy Icon" class="header__icon">
         </a>
         <img src="https://via.placeholder.com/101x18" width="101" height="18" alt="Cat Energy" class="header__title-logo">
-        <button class="header__burger" aria-label="Кнопка разворачивающая меню навигации по сайту">Бургер</button> 
+        <nav class="header__main-nav main-nav">
+          <h2 class="main-nav__title visually-hidden">Меню навигации по сайту</h2>
+          <button class="main-nav__toggle" aria-label="Кнопка разворачивающая меню навигации по сайту">Бургер</button>
+          <ul class="main-nav__nav-list nav-list visually-hidden">
+            <li class="nav-list__item"><a class="nav-list__link" aria-label="Ссылка на главную,но так как в вы и так на главной,она отключена">Главная</a></li>
+            <li class="nav-list__item"><a href="./catalog.html" class="nav-list__link" aria-label="Ссылка на каталог">Каталог</a></li>
+            <li class="nav-list__item"><a href="./form.html" class="nav-list__link" aria-label="Ссылка на страницу с формой подбора программы">Подбор программы</a></li>
+          </ul>
+        </nav>
       </header>
       <main class="main">
         <h1 class= "title main__title visually-hidden">Магазин питания для котов Cat Energy</h1>
-        <section class="homepage-block">
-          <h2 class="homepage-block__title">Функциональное питание для котов</h2>
-          <p class="homepage-block__text">Занялся собой? Займись и котом!</p>
-          <img src="https://via.placeholder.com/280x270" width="280" height="270" alt="Our product image" class="homepage-block__img">
+        <section class="homepage">
+          <h2 class="homepage__title">Функциональное питание для котов</h2>
+          <p class="homepage__text">Занялся собой? Займись и котом!</p>
+          <img src="https://via.placeholder.com/280x270" width="280" height="270" alt="Our product image" class="homepage__img">
+          <a href="./form.html" class="homepage__button button" aria-label="Ссылка на страницу с каталогом программ">Подобрать программу</a>
         </section>
         <section class="program-list">
-          <h2 class="title program-list__title visually-hidden">Доступные программы</h2>
-          <a href="catalog.html" class="catalog-list__button button" aria-label="Ссылка на страницу с каталогом программ">Подобрать программу</a>
+          <h2 class="title program-list__title visually-hidden">Доступные программы</h2>     
           <article class="program-list__item program">
             <div class="program__picture">
               <img src="https://via.placeholder.com/50x50" width="50" height="50" alt="Иконка программы для похудения" class="program__icon program__icon--slim">
@@ -41,9 +49,9 @@
             <a href="#" class="program__link" aria-label="Ссылка на страницу c программой Pro">Каталог Pro</a>
           </article>
         </section>
-        <section class="explanation-block">
-          <h2 class="title explanation-block__title">Как это работает?</h2>
-          <ul class="explanation-block__list explanation-list">
+        <section class="explanation">
+          <h2 class="title explanation__title">Как это работает?</h2>
+          <ul class="explanation__list explanation-list">
             <li class="explanation-list__item">
               <img src="https://via.placeholder.com/60x60" width="60" height="60" alt="Здоровое питание" class="explanation-list__icon">
               <p class="text explanation-list__text">Функциональное питание содержит только полезные питательные вещества.</p>
@@ -66,42 +74,44 @@
           <h2 class="title product-demonstration__title">Живой пример</h2>
           <p class="text product-demonstration__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           <ul class="product-demonstration__stats stats-list">
-            <li class="stats-list__item--weight">
+            <li class="stats-list__item">
               <span class="stats-list__value">5</span>
-              <h3 class="title stats-list__subtitle">cнижение веса</h3>
+              <small class="title stats-list__subtitle">cнижение веса</small>
             </li>
-            <li class="stats-list__item--time">
+            <li class="stats-list__item">
               <span class="stats-list__value">60 дней</span>
-              <h3 class="title stats-list__subtitle">затрачено времени</h3>
+              <small class="title stats-list__subtitle">затрачено времени</small>
             </li>
           </ul>
           <p class="product-demonstration__caption"> Затраты на питание: 15 000 руб. </p>
           <div class="product-demonstration__progress progress">
             <div class="progress__image-slides">
-              <ul class="progress__image-slide-list">
-                <li class="progress__result">
+              <ul class="progress__slides-list">
+                <li class="progress__result--before">
                   <img src="https://via.placeholder.com/311x232" width="311" height="232" alt="Толстый котик,который долгое время сидел на обычном корме" class="progress__image">
                 </li>
-                <li class="progress__result">
+                <li class="progress__result--after">
                   <img src="https://via.placeholder.com/311x232" width="311" height="232" alt="Тот же котик,но уже похудевший,прыткий,как будто заново родился!" class="progress_image">
                 </li>
               </ul>
             </div>
             <div class="progress__slider-controls">
               <button class="progress__slider-button" aria-label="Кнопка переключения слайдера">Было</button>
+              <input type="range" class="progress__input">
               <div class="progress__slider-line"></div>
+              <div class="progress__slider-thumb"></div>
               <button class="progress__slider-button" aria-label="Кнопка переключения слайдера">Стало</button>
             </div>
           </div>
         </section>      
       </main>
       <footer class="footer">
-        <div class="footer__our-adress our-adress">
-          <h2 class="title our-adress__title">Приглашаем к сотрудничеству дилеров!</h2>
-          <p class="text our-adress__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-          <div class="our-adress__map"></div>
+        <div class="footer__adress adress">
+          <h2 class="title adress__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <p class="text adress__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <div class="adress__map"></div>
         </div>
-        <a class="footer_logo-link" aria-label="Ссылка на главную,но так как вы и так на главной,она отключена">
+        <a class="footer__logo-link" aria-label="Ссылка на главную">
           <img src="https://via.placeholder.com/128x24" width="128" height="24" alt="Логотип магазина Cat Energy" class="footer__title-logo">
         </a>
         <ul class="footer__socials socials-list">
@@ -109,10 +119,10 @@
           <li class="socials-list__item"><a href="#" class="socials-list__link--inst social-link" aria-label="Ссылка на нашу страницу в Instagram"></a></li>
           <li class="socials-list__item"><a href="#" class="socials-list__link--fb social-link" aria-label="Ссылка на нашу страницу в Facebook"></a></li>
         </ul>
-        <div class="footer__copyright-block copyright-block">
-          <a href="#" class="text copyright-block__creator-text" aria-label="Ссылка на сайт разработчика сайта на котором вы находитесь"></a>
-          <a href="#" class="copyright-block__creator-logo" aria-label="Ссылка на сайт разработчика сайта на котором вы находитесь">
-            <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип создателя сайта" class="copyright-block__icon">
+        <div class="footer__copyright copyright">
+          <a href="#" class="text copyright__creator-text" aria-label="Ссылка на сайт разработчика сайта на котором вы находитесь"></a>
+          <a href="#" class="copyright__creator-logo" aria-label="Ссылка на сайт разработчика сайта на котором вы находитесь">
+            <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип создателя сайта" class="copyright__icon">
           </a>
         </div>
       </footer>
