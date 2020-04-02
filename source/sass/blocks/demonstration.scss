@@ -1,0 +1,82 @@
+.demonstration {
+  font-size: 14px;
+  line-height: 18px;
+  background-color: $alt-bg-color;
+}
+
+.demonstration__title {
+  font-size: 36px;
+  line-height: 60px;
+  color: $base-color;
+}
+
+.stats-list__item {
+  &:first-of-type {
+    border-bottom: none;
+  }
+  border: solid 1px $border-color;
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.stats-list__value {
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.stats-list__subtitle {
+  position: absolute;
+  z-index: 2;
+  top: 50px;
+  left: 0;
+  font-family: $alt-font;
+  font-size: 12px;
+  line-height: 12px;
+  background-color: $alt-bg-color;
+}
+
+.demonstration__caption {
+  text-transform: uppercase;
+  line-height: 20px;
+}
+
+.progress__input {
+  display: none;
+}
+
+.progress__slider-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.progress__slider-button {
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-family: inherit;
+}
+
+.progress__slider-button:hover {
+  border-bottom: 1px solid $color-text;
+}
+
+.progress__slider-line {
+  @include box(84px, 14px);
+  background-color: $bg-color;
+  border-radius: 6px;
+  border: 1px solid $border-color;
+  position: relative;
+}
+
+.progress__slider-thumb {
+  @include box(35px, 6px);
+  background-color: $green;
+  border-radius: 3px;
+  position: absolute;
+  top: 25%;
+  left: 6px;
+}
