@@ -1,11 +1,11 @@
 .explanation {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: $explanation-fs;
+  line-height: $explanation-lh;
 }
 
 .explanation__title {
-  font-size: 36px;
-  line-height: 60px;
+  font-size: $title-h2-fs;
+  line-height: $title-h2-lh;
 }
 
 .explanation-list__text {

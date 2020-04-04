@@ -1,14 +1,14 @@
 .bonuses {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: $bonuses-fs;
+  line-height: $bonuses-lh;
   background-color: $green;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 280px 289px;
-  color: #ffffff;
+  color: $white;
 }
 
 .bonuses__text {
-  color: #ffffff;
+  color: $white;
 }

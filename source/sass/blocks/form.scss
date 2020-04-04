@@ -1,11 +1,12 @@
 .form {
-  font-size: 16px;
-  line-height: 18px;
-  color: #222222;
+  font-size: $form-fs;
+  line-height: $form-lh;
+  color: $label-color;
+  overflow: hidden;
 }
 
 .form__text {
-  font-size: 14px;
+  font-size: $form-text-fs;
   text-transform: uppercase;
   color: $base-color;
 }
@@ -16,20 +17,19 @@
 }
 
 .form__legend {
-  font-size: 24px;
-  font-family: 24px;
+  font-size: $form-legend-fs;
+  font-family: $form-legend-lh;
   position: relative;
 
   &::after {
     content: "";
     display: block;
 
-    @include box(99px, 3px);
+    @include box(100vw, 3px);
     background-color: $green;
     position: absolute;
     top: 12px;
-    // как сделать так чтобы он растягивался до ширины окна??!
-    left: 100%;
+    left: 120%;
   }
 }
 
@@ -40,8 +40,10 @@
 .form__label {
   text-transform: uppercase;
   position: relative;
-  // маргин для того чтобы радио и чек инпуты нормальнео выглядели на этапе сеток сделаю всё как надо
-  margin-left: 30px;
+}
+
+.form-label--checkable {
+  padding-left: 46px;
 }
 
 .form__input {
@@ -51,7 +53,6 @@
   font-size: inherit;
   line-height: inherit;
   font-family: inherit;
-  padding-left: 16px;
 
   &:focus {
     border-color: $base-color;
@@ -60,18 +61,9 @@
   &:invalid {
     border-color: $invalid;
   }
-
-  &--radio,
-  &--checkbox {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
 }
 
-.form__input--radio + label {
+.form__input--radio + .form__label {
   &::before {
     content: "";
     display: block;
@@ -86,23 +78,23 @@
   &::after {
     position: absolute;
     top: 0;
-    left: -35px;
+    left: 0;
   }
 }
 
 
-.form__input--radio + label:hover {
+.form__input--radio + .form__label:hover {
   &::before {
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: $checkable-inputs-bs;
   }
 }
 
-.form__input--radio + label:active {
-  @include opacity(0.3);
+.form__input--radio + .form__label:active {
+  opacity: 0.3;
 }
 
-.form__input--radio:checked + label:active {
-  @include opacity(0.3);
+.form__input--radio:checked + .form__label:active {
+  opacity: 0.3;
 
   &::after {
     content: "";
@@ -111,12 +103,12 @@
 
     @include box(8px);
     border-radius: 50%;
-    top: 11px;
-    left: -24px;
+    top: 12px;
+    left: 11px;
   }
 }
 
-.form__input--radio:checked + label {
+.form__input--radio:checked + .form__label {
   &::before {
     border-color: $green;
   }
@@ -128,8 +120,8 @@
 
     @include box(8px);
     border-radius: 50%;
-    top: 11px;
-    left: -24px;
+    top: 12px;
+    left: 11px;
   }
 }
 
@@ -156,7 +148,7 @@
   resize: none;
 }
 
-.form__input--checkbox + label {
+.form__input--checkbox + .form__label {
   &::before {
     content: "";
     display: block;
@@ -166,23 +158,23 @@
     background-color: transparent;
     color: $green;
     position: absolute;
-    top: 0;
-    left: -35px;
+    top: -3px;
+    left: 0;
   }
 }
 
-.form__input--checkbox + label:hover {
+.form__input--checkbox + .form__label:hover {
   &::before {
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: $checkable-inputs-bs;
   }
 }
 
-.form__input--checkbox + label:active {
-  @include opacity(0.3);
+.form__input--checkbox + .form__label:active {
+  opacity: 0.3;
 }
 
-.form__input--checkbox:checked + label:active {
-  @include opacity(0.3);
+.form__input--checkbox:checked + .form__label:active {
+  opacity: 0.3;
 
   &::before {
     background-image: url("../img/icon-tick.svg");
@@ -190,11 +182,11 @@
     background-position: center;
     background-size: 22px 17px;
     top: 11px;
-    left: -24px;
+    left: 0;
   }
 }
 
-.form__input--checkbox:checked + label {
+.form__input--checkbox:checked + .form__label {
   &::before {
     background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
@@ -204,6 +196,6 @@
 }
 
 .form__explanation-text {
-  font-size: 14px;
-  line-height: 16px;
+  font-size: $form-explanation-fs;
+  line-height: $form-explanation-lh;
 }

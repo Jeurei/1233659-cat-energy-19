@@ -1,0 +1,19 @@
+.adress {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: $adress-fs;
+  line-height: $adress-lh;
+}
+
+.adress__title {
+  font-size: $adress-title-fs;
+  line-height: $adress-title-lh;
+  margin-right: 19px;
+}
+
+.adress__map {
+  @include box(100%, 320px);
+}

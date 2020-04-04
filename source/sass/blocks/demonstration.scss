@@ -1,12 +1,12 @@
 .demonstration {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: $demonstration-fs;
+  line-height: $demonstration-lh;
   background-color: $alt-bg-color;
 }
 
 .demonstration__title {
-  font-size: 36px;
-  line-height: 60px;
+  font-size: $title-h2-fs;
+  line-height: $title-h2-lh;
   color: $base-color;
 }
 
@@ -22,8 +22,8 @@
 
 .stats-list__value {
   text-transform: uppercase;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: $stats-value-fs;
+  line-height: $stats-value-lh;
 }
 
 .stats-list__subtitle {
@@ -32,14 +32,14 @@
   top: 50px;
   left: 0;
   font-family: $alt-font;
-  font-size: 12px;
-  line-height: 12px;
+  font-size: $stats-subtitle-fs;
+  line-height: $stats-subtitle-lh;
   background-color: $alt-bg-color;
 }
 
 .demonstration__caption {
   text-transform: uppercase;
-  line-height: 20px;
+  line-height: $demonstration-caption-lh;
 }
 
 .progress__input {
@@ -67,7 +67,7 @@
 .progress__slider-line {
   @include box(84px, 14px);
   background-color: $bg-color;
-  border-radius: 6px;
+  border-radius: $slider-line-br;
   border: 1px solid $border-color;
   position: relative;
 }
@@ -75,7 +75,7 @@
 .progress__slider-thumb {
   @include box(35px, 6px);
   background-color: $green;
-  border-radius: 3px;
+  border-radius: $slider-thumb-br;
   position: absolute;
   top: 25%;
   left: 6px;

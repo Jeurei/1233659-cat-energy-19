@@ -2,8 +2,3 @@
   width: $width;
   height: $height;
 }
-
-@mixin opacity($opacity) {
-  opacity: $opacity;
-  $opacity-ie: $opacity * 100;
-}

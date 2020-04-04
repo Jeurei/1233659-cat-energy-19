@@ -5,18 +5,18 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 305px;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: $homepage-fs;
+  line-height: $homepage-lh;
 }
 
 .homepage__title {
-  font-size: 36px;
-  line-height: 36px;
-  color: #ffffff;
+  font-size: $homepage-title-fs;
+  line-height: $homepage-title-lh;
+  color: $white;
 }
 
 .homepage__text {
   text-transform: uppercase;
   font-family: $main-font;
-  color: #ffffff;
+  color: $white;
 }

@@ -1,11 +1,11 @@
 .additional-products {
-  font-size: 14px;
-  line-height: 14px;
+  font-size: $additional-products-fs;
+  line-height: $additional-products-lh;
 }
 
 .additional-products__title {
-  font-size: 24px;
-  line-height: 24px;
+  font-size: $alt-title-h2-fs;
+  line-height: $alt-title-h2-lh;
   position: relative;
 
   &::before {
@@ -26,4 +26,14 @@
   &:last-child {
     border-bottom: 1px solid $border-color;
   }
+}
+
+.additional-product-card__title {
+  font-size: $alt-title-h3-fs;
+  line-height: $alt-title-h3-lh;
+}
+
+.additional-product-card__table {
+  font-size: $additional-products-table-fs;
+  line-height: $additional-products-table-lh;
 }
