@@ -1,0 +1,24 @@
+.show-more {
+  border-top: 1px solid $border-color;
+}
+
+.show-more__icon {
+  background-image: url("../img/icon-plus-mobile.svg");
+  width: 31px;
+  height: 31px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 31px 31px;
+  opacity: 0.2;
+}
+
+.show-more__title {
+  text-transform: uppercase;
+  font-size: $title-h3-fs;
+  line-height: $title-h3-lh;
+}
+
+.show-more__button {
+  background-color: $alt-bg-color;
+  color: $color-text;
+}

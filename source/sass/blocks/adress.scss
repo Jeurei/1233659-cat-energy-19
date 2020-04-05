@@ -1,0 +1,19 @@
+.adress {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: $body-fs;
+  line-height: $alt-lh;
+}
+
+.adress__title {
+  font-size: $alt-fs;
+  line-height: $alt-lh;
+  margin-right: 19px;
+}
+
+.adress__map {
+  @include box(100%, 320px);
+}

@@ -1,0 +1,16 @@
+.header {
+  background-color: $bg-color;
+  color: $base-color;
+  font-size: 20px;
+  line-height: $alt-lh;
+}
+
+.header__link {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

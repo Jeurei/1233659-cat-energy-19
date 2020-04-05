@@ -1,0 +1,27 @@
+.copyright__creator-logo {
+  color: $icons-color;
+
+  &:hover {
+    color: $green;
+  }
+
+  &:active {
+    color: $green;
+
+    opacity: 0.3;
+  }
+}
+
+.copyright__text {
+  color: $color-text;
+  font-family: $alt-font;
+  line-height: 16px;
+
+  &:hover {
+    color: $color-text;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
