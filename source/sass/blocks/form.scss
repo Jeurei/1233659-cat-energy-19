@@ -1,12 +1,12 @@
 .form {
-  font-size: $form-fs;
-  line-height: $form-lh;
+  font-size: $alt-fs;
+  line-height: $alt-lh;
   color: $label-color;
   overflow: hidden;
 }
 
 .form__text {
-  font-size: $form-text-fs;
+  font-size: $body-fs;
   text-transform: uppercase;
   color: $base-color;
 }
@@ -17,8 +17,8 @@
 }
 
 .form__legend {
-  font-size: $form-legend-fs;
-  font-family: $form-legend-lh;
+  font-size: $title-h2-fs;
+  font-family: $title-h2-lh;
   position: relative;
 
   &::after {
@@ -196,6 +196,6 @@
 }
 
 .form__explanation-text {
-  font-size: $form-explanation-fs;
-  line-height: $form-explanation-lh;
+  font-size: $body-fs;
+  line-height: 16px;
 }

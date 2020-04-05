@@ -5,13 +5,13 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 305px;
-  font-size: $homepage-fs;
-  line-height: $homepage-lh;
+  font-size: $body-fs;
+  line-height: 14px;
 }
 
 .homepage__title {
-  font-size: $homepage-title-fs;
-  line-height: $homepage-title-lh;
+  font-size: $title-h1-fs;
+  line-height: 36px;
   color: $white;
 }
 

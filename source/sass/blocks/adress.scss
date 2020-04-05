@@ -4,13 +4,13 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  font-size: $adress-fs;
-  line-height: $adress-lh;
+  font-size: $body-fs;
+  line-height: $alt-lh;
 }
 
 .adress__title {
-  font-size: $adress-title-fs;
-  line-height: $adress-title-lh;
+  font-size: $alt-fs;
+  line-height: $alt-lh;
   margin-right: 19px;
 }
 

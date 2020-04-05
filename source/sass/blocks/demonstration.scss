@@ -1,12 +1,12 @@
 .demonstration {
-  font-size: $demonstration-fs;
-  line-height: $demonstration-lh;
+  font-size: $body-fs;
+  line-height: 18px;
   background-color: $alt-bg-color;
 }
 
 .demonstration__title {
-  font-size: $title-h2-fs;
-  line-height: $title-h2-lh;
+  font-size: $title-h1-fs;
+  line-height: $title-h1-lh;
   color: $base-color;
 }
 
@@ -22,8 +22,8 @@
 
 .stats-list__value {
   text-transform: uppercase;
-  font-size: $stats-value-fs;
-  line-height: $stats-value-lh;
+  font-size: $title-h2-fs;
+  line-height: $title-h2-lh;
 }
 
 .stats-list__subtitle {
@@ -32,14 +32,14 @@
   top: 50px;
   left: 0;
   font-family: $alt-font;
-  font-size: $stats-subtitle-fs;
-  line-height: $stats-subtitle-lh;
+  font-size: 12px;
+  line-height: 12px;
   background-color: $alt-bg-color;
 }
 
 .demonstration__caption {
   text-transform: uppercase;
-  line-height: $demonstration-caption-lh;
+  line-height: 20px;
 }
 
 .progress__input {

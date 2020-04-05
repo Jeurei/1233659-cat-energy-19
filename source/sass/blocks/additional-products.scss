@@ -1,11 +1,11 @@
 .additional-products {
-  font-size: $additional-products-fs;
-  line-height: $additional-products-lh;
+  font-size: $alt-fs;
+  line-height: 20px;
 }
 
 .additional-products__title {
-  font-size: $alt-title-h2-fs;
-  line-height: $alt-title-h2-lh;
+  font-size: $title-h2-fs;
+  line-height: $title-h2-lh;
   position: relative;
 
   &::before {
@@ -29,11 +29,11 @@
 }
 
 .additional-product-card__title {
-  font-size: $alt-title-h3-fs;
-  line-height: $alt-title-h3-lh;
+  font-size: $title-h4-fs;
+  line-height: $title-h4-lh;
 }
 
 .additional-product-card__table {
-  font-size: $additional-products-table-fs;
-  line-height: $additional-products-table-lh;
+  font-size: $body-fs;
+  line-height: 14px;
 }
