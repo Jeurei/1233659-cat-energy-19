@@ -1,0 +1,13 @@
+.product-card {
+  border-top: 1px solid $border-color;
+
+  &:last-child {
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.product-card__title {
+  text-transform: uppercase;
+  font-size: $title-h3-fs;
+  line-height: $title-h3-lh;
+}

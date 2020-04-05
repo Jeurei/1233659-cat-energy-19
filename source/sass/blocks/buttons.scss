@@ -1,0 +1,17 @@
+.button {
+  font-family: inherit;
+
+  @include box(280px, 40px);
+  background-color: $green;
+  color: $alt-base-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 14px;
+  padding-bottom: 11px;
+  border: none;
+  text-transform: uppercase;
+  font-size: $alt-fs;
+  line-height: $alt-lh;
+}
