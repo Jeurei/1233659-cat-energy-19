@@ -1,6 +1,25 @@
 .footer {
   background-color: $alt-bg-color;
   color: $color-text;
-  font-size: $alt-fs;
-  line-height: $alt-lh;
+  font-size: $secondary-fs;
+  line-height: $secondary-lh;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 19px;
+}
+
+.footer__logo-link {
+  padding-bottom: 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

@@ -1,0 +1,16 @@
+.inner {
+  width: 280px;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .inner {
+    width: 708px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .inner {
+    width: 1220px;
+  }
+}

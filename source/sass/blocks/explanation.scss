@@ -1,14 +1,34 @@
 .explanation {
   font-size: $body-fs;
   line-height: $body-lh;
+  padding-bottom: 20px;
+}
+
+.explanation__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding-right: 6px;
 }
 
 .explanation__title {
   font-size: $title-h1-fs;
   line-height: $title-h1-lh;
+  padding-bottom: 17.5px;
+}
+
+.explanation__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 
 .explanation-list__text {
+  display: flex;
+  flex-direction: row;
+
   &::before {
     content: "";
     display: block;
@@ -17,6 +37,9 @@
     background-color: $green;
     background-position: center;
     background-repeat: no-repeat;
+    flex-shrink: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -41,5 +64,62 @@
 .explanation-list__text--clock {
   &::before {
     background-image: url("../img/advantage-clock@1x.png");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .explanation__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .explanation-list__item {
+    width: 201px;
+    margin-bottom: 63px;
+
+    &:nth-child(2n) {
+      margin-left: 183px;
+    }
+  }
+
+  .explanation-list__text {
+    flex-direction: column;
+    position: relative;
+
+    &::after {
+      display: block;
+      font-size: 190px;
+      line-height: 1px;
+      color: $base-color;
+      opacity: 0.1;
+      position: absolute;
+      top: 50%;
+      left: 60%;
+      font-family: $main-font;
+    }
+  }
+
+  .explanation-list__item:nth-child(1) {
+    .explanation-list__text::after {
+      content: "1";
+    }
+  }
+
+  .explanation-list__item:nth-child(2) {
+    .explanation-list__text::after {
+      content: "2";
+    }
+  }
+
+  .explanation-list__item:nth-child(3) {
+    .explanation-list__text::after {
+      content: "3";
+    }
+  }
+
+  .explanation-list__item:nth-child(4) {
+    .explanation-list__text::after {
+      content: "4";
+    }
   }
 }

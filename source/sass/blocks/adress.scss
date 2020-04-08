@@ -1,19 +1,47 @@
 .adress {
+  font-size: $body-fs;
+  line-height: $secondary-lh;
+  background-color: $white;
+}
+
+.adress__inner {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  font-size: $body-fs;
-  line-height: $alt-lh;
+  padding-top: 15px;
+  padding-bottom: 13px;
 }
 
 .adress__title {
-  font-size: $alt-fs;
-  line-height: $alt-lh;
+  font-size: $secondary-fs;
+  line-height: $secondary-lh;
   margin-right: 19px;
+  text-transform: uppercase;
 }
 
 .adress__map {
   @include box(100%, 320px);
+}
+
+@media (min-width: $tablet-width) {
+  .adress {
+    font-size: $secondary-fs;
+    padding-top: 34px;
+  }
+
+  .adress__title {
+    font-size: 20px;
+    line-height: 25px;
+    width: 154px;
+  }
+
+  .adress__text {
+    width: 153px;
+  }
+
+  .adress__map {
+    margin-top: 29px;
+    height: 400px;
+  }
 }

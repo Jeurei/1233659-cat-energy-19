@@ -1,10 +1,19 @@
 .program-list {
   font-size: $body-fs;
   line-height: 18px;
+  padding-bottom: 17.5px;
 }
 
 .program {
   background-color: $alt-bg-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 21px;
+  padding-right: 36px;
+  padding-top: 24px;
 
   &:first-of-type {
     margin-bottom: 20px;
@@ -25,6 +34,14 @@
 .program__title {
   font-size: $title-h2-fs;
   line-height: 37px;
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+
+.program__text {
+  padding-top: 24px;
+  padding-bottom: 23px;
+  width: 100%;
 }
 
 .program__link {
@@ -34,18 +51,41 @@
   padding-bottom: 19.5px;
   border-top: 1px solid $border-color;
   text-transform: uppercase;
-  font-size: $alt-fs;
+  font-size: $secondary-fs;
   line-height: 16px;
+  width: 100%;
 
   &::after {
     content: "";
     position: absolute;
-    top: 23px;
-    left: 95px;
+    top: 20px;
+    left: 44%;
 
     @include box(25px, 12px);
     background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
     background-position: center;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .program-list {
+    font-size: $secondary-fs;
+    line-height: 24px;
+  }
+
+  .program__title {
+    font-size: $title-h1-fs;
+    line-height: 37px;
+  }
+
+  .program__link {
+    font-size: 20px;
+    line-height: 20px;
+    border: none;
+
+    &::after {
+      left: 20%;
+    }
   }
 }

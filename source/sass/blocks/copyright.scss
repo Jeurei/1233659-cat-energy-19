@@ -1,5 +1,15 @@
+.copyright {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+}
+
 .copyright__creator-logo {
   color: $icons-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 
   &:hover {
     color: $green;
@@ -16,6 +26,7 @@
   color: $color-text;
   font-family: $alt-font;
   line-height: 16px;
+  margin-right: auto;
 
   &:hover {
     color: $color-text;
@@ -23,5 +34,16 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    width: 162px;
+  }
+
+  .copyright__text {
+    margin-right: 23px;
+    white-space: nowrap;
   }
 }
