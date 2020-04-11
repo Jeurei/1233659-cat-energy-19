@@ -18,6 +18,9 @@ body {
   font-weight: $font-normal;
   color: $color-text;
   background-color: $bg-color;
+  counter-reset: product;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -32,12 +35,12 @@ img {
 
 @media (min-width: $tablet-width) {
   body {
-    min-width: 768px;
+    min-width: $tablet-width;
   }
 }
 
 @media (min-width: $desktop-width) {
   body {
-    min-width: 1440px;
+    min-width: $desktop-width;
   }
 }

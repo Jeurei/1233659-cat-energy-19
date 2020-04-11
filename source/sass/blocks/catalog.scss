@@ -1,4 +1,32 @@
 .catalog {
   font-size: 12px;
   line-height: 16px;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.catalog__inner{
+  width: 280px;
+  margin:0 auto;
+  padding-top:32px;
+  padding-bottom: 35px;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 708px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    width: 1220px;
+    margin: 0 auto;
+  }
 }

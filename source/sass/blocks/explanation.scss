@@ -74,52 +74,71 @@
   }
 
   .explanation-list__item {
-    width: 201px;
+    width: 34%;
+    height: 228px;
+    display: flex;
     margin-bottom: 63px;
+    padding-right: 40px;
 
     &:nth-child(2n) {
-      margin-left: 183px;
+      margin-left: auto;
     }
+  }
+
+  .explanation__title {
+    font-size: $big-title-fs;
+    line-height: $title-h1-lh;
+    padding-bottom: 63px;
   }
 
   .explanation-list__text {
     flex-direction: column;
     position: relative;
+    font-size: $secondary-fs;
+    line-height: 24px;
+
+    &::before {
+      @include box(80px,80px);
+    }
 
     &::after {
       display: block;
-      font-size: 190px;
+      font-size: 281px;
       line-height: 1px;
       color: $base-color;
       opacity: 0.1;
       position: absolute;
-      top: 50%;
+      top: 45%;
       left: 60%;
       font-family: $main-font;
     }
   }
 
-  .explanation-list__item:nth-child(1) {
-    .explanation-list__text::after {
-      content: "1";
-    }
+  .explanation-list__text--leaf::after {
+    counter-increment: product;
+    content: counter(product);
   }
 
-  .explanation-list__item:nth-child(2) {
-    .explanation-list__text::after {
-      content: "2";
-    }
+  .explanation-list__text--powder::after {
+    counter-increment: product;
+    content: counter(product);
   }
 
-  .explanation-list__item:nth-child(3) {
-    .explanation-list__text::after {
-      content: "3";
-    }
+
+  .explanation-list__text--cultery::after {
+    counter-increment: product;
+    content: counter(product);
   }
 
-  .explanation-list__item:nth-child(4) {
-    .explanation-list__text::after {
-      content: "4";
-    }
+  .explanation-list__text--clock::after {
+    counter-increment: product;
+    content: counter(product);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .explanation-list__item {
+    width: 25%;
+    padding-right: 120px;
   }
 }

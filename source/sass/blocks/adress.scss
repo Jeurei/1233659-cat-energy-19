@@ -1,7 +1,7 @@
 .adress {
   font-size: $body-fs;
   line-height: $secondary-lh;
-  background-color: $white;
+  background-color: $alt-bg-color;
 }
 
 .adress__inner {
@@ -31,17 +31,42 @@
   }
 
   .adress__title {
-    font-size: 20px;
-    line-height: 25px;
-    width: 154px;
+    font-size: $title-h3-fs;
+    line-height: $title-h3-lh;
+    width: 20%;
   }
 
   .adress__text {
-    width: 153px;
+    width: 20%;
   }
 
   .adress__map {
     margin-top: 29px;
     height: 400px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .adress {
+    position: relative;
+    padding-top: 0;
+  }
+
+  .adress__inner {
+    width: 570px;
+    position: absolute;
+    z-index: 2;
+    min-height: 201px;
+    background-color: $white;
+    top: 20%;
+    left: 10%;
+    padding-top: 69px;
+    padding-bottom: 62px;
+    padding-left: 76px;
+    padding-right: 90px;
+  }
+
+  .adress__text {
+    width: 31%;
   }
 }

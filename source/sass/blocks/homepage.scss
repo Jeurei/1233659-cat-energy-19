@@ -40,10 +40,10 @@
   .homepage {
     background: none;
     background-color: $white;
-    background-image: url("../../img/index-can-tablet@1x.jpg");
+    background-image: url("../img/index-can-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: bottom center;
-    min-height: 830px;
+    min-height: 840px;
   }
 
   .homepage__inner {
@@ -53,8 +53,8 @@
   }
 
   .homepage__title {
-    font-size: 60px;
-    width: 420px;
+    font-size: $big-title-fs;
+    width: 70%;
     line-height: $title-h1-lh;
     color: $base-color;
     padding-bottom: 33px;
@@ -74,5 +74,22 @@
   .homepage__button {
     width: 245px;
     height: 52px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .homepage {
+    background-image: url("../img/index-can-desktop@1x.png"), linear-gradient(to right, $white 50%, $bg-green 50%);
+    background-position: 60% center;
+    min-height: 696px;
+    display: flex;
+  }
+
+  .homepage__title {
+    font-size: $big-title-fs;
+    line-height: $title-h1-lh;
+    width: 40%;
+    padding-top: 113px;
+    padding-bottom: 33px;
   }
 }

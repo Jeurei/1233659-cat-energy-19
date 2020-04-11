@@ -60,13 +60,17 @@
     min-height: 77px;
   }
 
+  .header__link {
+    margin-right: auto;
+  }
+
   .nav-list {
+    padding-left: 96px;
     border: none;
     width: auto;
     flex-direction: row;
     flex-grow: 1;
     justify-content: space-between;
-    margin-left: 96px;
   }
 
   .nav-list__item {
@@ -81,7 +85,22 @@
 
 @media (min-width: $desktop-width) {
   .nav-list {
-    margin-left: 530px;
-    justify-content: space-around;
+    padding-left: 44%;
+  }
+
+  .header .nav-list__link {
+    color: $base-color;
+  }
+
+  .header--index .nav-list__link {
+    color: $white;
+  }
+
+  .header .nav-list__link--active {
+    box-shadow: inset 0 -3px 0 0 $green;
+  }
+
+  .header--index .nav-list__link--active {
+    box-shadow: inset 0 -3px 0 0 $white;
   }
 }

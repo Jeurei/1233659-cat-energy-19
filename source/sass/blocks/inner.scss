@@ -1,16 +1,22 @@
 .inner {
-  width: 280px;
+  width: $mobile-width;
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
   margin: 0 auto;
 }
 
 @media (min-width: $tablet-width) {
   .inner {
-    width: 708px;
+    width: $tablet-width;
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
   }
 }
 
 @media (min-width: $desktop-width) {
   .inner {
-    width: 1220px;
+    width: $desktop-width;
+    padding-left: $desktop-padding;
+    padding-right: $desktop-padding;
   }
 }
