@@ -18,9 +18,6 @@ body {
   font-weight: $font-normal;
   color: $color-text;
   background-color: $bg-color;
-  counter-reset: product;
-  display: flex;
-  flex-direction: column;
 }
 
 a {

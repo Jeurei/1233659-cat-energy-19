@@ -79,8 +79,9 @@
 
 @media (min-width: $desktop-width) {
   .homepage {
-    background-image: url("../img/index-can-desktop@1x.png"), linear-gradient(to right, $white 50%, $bg-green 50%);
-    background-position: 60% center;
+    background-image: url("../img/index-can-desktop@1x.png"), url("../img/index-background-desktop@1x.jpg"), linear-gradient(to right, $white 50%, $bg-green 50%);
+    background-position: 60%, 100%, center;
+    background-size: 552px, 720px, 100%;
     min-height: 696px;
     display: flex;
   }

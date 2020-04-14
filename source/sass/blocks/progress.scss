@@ -64,32 +64,16 @@
     justify-content: flex-start;
   }
 
-  .progress__slider-line {
-    margin-left: 24px;
-    margin-right: 21px;
+  .progress__input {
+    display: block;
     flex-grow: 1;
-    background-color: #dcdcdc;
-    border: none;
+  }
+
+  .progress__slider-line {
+    display: none;
   }
 
   .progress__slider-thumb {
-    @include box(34px,34px);
-    border-radius: 50%;
-    background-color: $white;
-    top: -85%;
-    left: 50%;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
-
-    &::before {
-      content: "";
-      display: block;
-
-      @include box(8px,8px);
-      border-radius: 50%;
-      background-color: $green;
-      position: absolute;
-      top: 40%;
-      left: 40%;
-    }
+    display: none;
   }
 }

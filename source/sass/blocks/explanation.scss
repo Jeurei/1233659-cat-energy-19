@@ -2,6 +2,7 @@
   font-size: $body-fs;
   line-height: $body-lh;
   padding-bottom: 20px;
+  counter-reset: product;
 }
 
 .explanation__inner {
@@ -75,7 +76,6 @@
 
   .explanation-list__item {
     width: 34%;
-    height: 228px;
     display: flex;
     margin-bottom: 63px;
     padding-right: 40px;

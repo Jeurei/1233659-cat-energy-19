@@ -53,12 +53,12 @@
 }
 
 .program__title--slim::after {
-  background-image: url("../../img/icon-cat-slim.svg");
+  background-image: url("../img/icon-cat-slim.svg");
   background-size: 35px 49px;
 }
 
 .program__title--pro::after {
-  background-image: url("../../img/icon-cat-pro.svg");
+  background-image: url("../img/icon-cat-pro.svg");
   width: 67px;
   background-size: 67px 28px;
   left: -8px;
@@ -84,7 +84,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 20%;
     left: 44%;
 
     @include box(25px, 12px);
@@ -147,7 +147,7 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: 141px 196px;
-      background-image: url("../../img/icon-cat-slim.svg");
+      background-image: url("../img/icon-cat-slim.svg");
       top: -30%;
       right: -60%;
       z-index: 2;
@@ -165,7 +165,7 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: 268px 113px;
-      background-image: url("../../img/icon-cat-pro.svg");
+      background-image: url("../img/icon-cat-pro.svg");
       top: -5%;
       right: -91%;
       z-index: 2;
@@ -178,7 +178,7 @@
     border: none;
 
     &::after {
-      left: 20%;
+      left: 35%;
     }
   }
 }
@@ -207,7 +207,6 @@
   }
 
   .program__title {
-    height: 100px;
     line-height: 37px;
     padding-left: 33%;
 
@@ -245,6 +244,12 @@
 
     &::before {
       display: none;
+    }
+  }
+
+  .program__link {
+    &::after {
+      left: 25%;
     }
   }
 }

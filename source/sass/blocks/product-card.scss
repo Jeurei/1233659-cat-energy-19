@@ -1,15 +1,13 @@
 .product-card {
   border-top: 1px solid $border-color;
   padding-bottom: 24px;
-}
-
-.product-card__inner {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
+
 
 .product-card__link {
   width: 50%;
@@ -39,11 +37,7 @@
   .product-card {
     border: none;
     width: 45%;
-  }
-
-  .product-card__inner {
     background-color: $alt-bg-color;
-    width: 100%;
     flex-direction: column;
   }
 
@@ -84,9 +78,6 @@
     justify-content: center;
   }
 
-  .product-card__inner {
-    padding: 0;
-  }
 
   .product-card__order-button {
     width: 169px;
