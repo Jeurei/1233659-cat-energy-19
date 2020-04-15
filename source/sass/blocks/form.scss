@@ -283,11 +283,11 @@
       content: "";
       display: block;
 
-      @include box(100vw, 3px);
+      @include box(100%, 3px);
       background-color: $green;
       position: absolute;
       top: 20%;
-      left: -105vw;
+      left: -105%;
     }
   }
 
