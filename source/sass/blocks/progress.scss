@@ -1,0 +1,79 @@
+.progress {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: $secondary-fs;
+  line-height: $secondary-lh;
+}
+
+.progress__input {
+  display: none;
+}
+
+.progress__slider-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 17.5px;
+  padding-bottom: 18px;
+}
+
+.progress__slider-button {
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-family: inherit;
+  border-bottom: 1px solid transparent;
+}
+
+.progress__slider-button:hover {
+  border-bottom: 1px solid $color-text;
+}
+
+.progress__slider-line {
+  @include box(84px, 14px);
+  background-color: $bg-color;
+  border-radius: $slider-line-br;
+  border: 1px solid $border-color;
+  position: relative;
+  margin-left: 19px;
+  margin-right: 18px;
+}
+
+.progress__slider-thumb {
+  @include box(35px, 6px);
+  background-color: $green;
+  border-radius: $slider-thumb-br;
+  position: absolute;
+  top: 25%;
+  left: 6px;
+}
+
+@media (min-width: $tablet-width) {
+  .progress {
+    font-size: 20px;
+    line-height: $secondary-lh;
+    padding-bottom: 75px;
+  }
+
+  .progress__slider-controls {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .progress__input {
+    display: block;
+    flex-grow: 1;
+  }
+
+  .progress__slider-line {
+    display: none;
+  }
+
+  .progress__slider-thumb {
+    display: none;
+  }
+}

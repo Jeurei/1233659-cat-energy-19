@@ -1,19 +1,72 @@
 .adress {
+  font-size: $body-fs;
+  line-height: $secondary-lh;
+  background-color: $alt-bg-color;
+}
+
+.adress__inner {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  font-size: $body-fs;
-  line-height: $alt-lh;
+  padding-top: 15px;
+  padding-bottom: 13px;
 }
 
 .adress__title {
-  font-size: $alt-fs;
-  line-height: $alt-lh;
+  font-size: $secondary-fs;
+  line-height: $secondary-lh;
   margin-right: 19px;
+  text-transform: uppercase;
 }
 
 .adress__map {
   @include box(100%, 320px);
+}
+
+@media (min-width: $tablet-width) {
+  .adress {
+    font-size: $secondary-fs;
+    padding-top: 34px;
+  }
+
+  .adress__title {
+    font-size: $title-h3-fs;
+    line-height: $title-h3-lh;
+    width: 20%;
+  }
+
+  .adress__text {
+    width: 20%;
+  }
+
+  .adress__map {
+    margin-top: 29px;
+    height: 400px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .adress {
+    position: relative;
+    padding-top: 0;
+  }
+
+  .adress__inner {
+    width: 570px;
+    position: absolute;
+    z-index: 2;
+    min-height: 201px;
+    background-color: $white;
+    top: 20%;
+    left: 10%;
+    padding-top: 69px;
+    padding-bottom: 62px;
+    padding-left: 76px;
+    padding-right: 90px;
+  }
+
+  .adress__text {
+    width: 31%;
+  }
 }

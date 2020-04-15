@@ -1,4 +1,18 @@
+// карточки одинакового должны быть размера поэтому сделал stretch
 .catalog {
   font-size: 12px;
   line-height: 16px;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

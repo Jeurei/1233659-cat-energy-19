@@ -1,14 +1,35 @@
 .explanation {
   font-size: $body-fs;
   line-height: $body-lh;
+  padding-bottom: 20px;
+  counter-reset: product;
+}
+
+.explanation__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding-right: 6px;
 }
 
 .explanation__title {
   font-size: $title-h1-fs;
   line-height: $title-h1-lh;
+  padding-bottom: 17.5px;
+}
+
+.explanation__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 
 .explanation-list__text {
+  display: flex;
+  flex-direction: row;
+
   &::before {
     content: "";
     display: block;
@@ -17,6 +38,9 @@
     background-color: $green;
     background-position: center;
     background-repeat: no-repeat;
+    flex-shrink: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -41,5 +65,80 @@
 .explanation-list__text--clock {
   &::before {
     background-image: url("../img/advantage-clock@1x.png");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .explanation__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .explanation-list__item {
+    width: 34%;
+    display: flex;
+    margin-bottom: 63px;
+    padding-right: 40px;
+
+    &:nth-child(2n) {
+      margin-left: auto;
+    }
+  }
+
+  .explanation__title {
+    font-size: $big-title-fs;
+    line-height: $title-h1-lh;
+    padding-bottom: 63px;
+  }
+
+  .explanation-list__text {
+    flex-direction: column;
+    position: relative;
+    font-size: $secondary-fs;
+    line-height: 24px;
+
+    &::before {
+      @include box(80px,80px);
+    }
+
+    &::after {
+      display: block;
+      font-size: 281px;
+      line-height: 1px;
+      color: $base-color;
+      opacity: 0.1;
+      position: absolute;
+      top: 45%;
+      left: 60%;
+      font-family: $main-font;
+    }
+  }
+
+  .explanation-list__text--leaf::after {
+    counter-increment: product;
+    content: counter(product);
+  }
+
+  .explanation-list__text--powder::after {
+    counter-increment: product;
+    content: counter(product);
+  }
+
+
+  .explanation-list__text--cultery::after {
+    counter-increment: product;
+    content: counter(product);
+  }
+
+  .explanation-list__text--clock::after {
+    counter-increment: product;
+    content: counter(product);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .explanation-list__item {
+    width: 25%;
+    padding-right: 120px;
   }
 }

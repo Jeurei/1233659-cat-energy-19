@@ -1,25 +1,57 @@
 .form {
-  font-size: $alt-fs;
-  line-height: $alt-lh;
+  font-size: $secondary-fs;
+  line-height: $secondary-lh;
   color: $label-color;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.form__inner {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .form__text {
   font-size: $body-fs;
   text-transform: uppercase;
+  width: 81%;
   color: $base-color;
+  padding-bottom: 39px;
 }
 
 .form__fieldset {
   border: none;
   border-bottom: 1px solid $border-color;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
 }
 
+.form__fieldset--row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+// вопрос по поводу блока <legend>Контактные данные (владельца кота) полосочка уезжает за пределы окна,мне её как то отедельно нужно спозиционировать или можно что то придумать с шириной?
 .form__legend {
   font-size: $title-h2-fs;
   font-family: $title-h2-lh;
   position: relative;
+  padding-left: 0;
+  padding-bottom: 35px;
+  width: auto;
 
   &::after {
     content: "";
@@ -28,9 +60,17 @@
     @include box(100vw, 3px);
     background-color: $green;
     position: absolute;
-    top: 12px;
-    left: 120%;
+    top: 20%;
+    left: 110%;
   }
+}
+
+.form__item-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .form__list-item {
@@ -40,16 +80,21 @@
 .form__label {
   text-transform: uppercase;
   position: relative;
+  margin-right: 5%;
 }
 
-.form-label--checkable {
+.form__label--checkable {
   padding-left: 46px;
 }
 
+
 .form__input {
   border: 1px solid $border-color;
-
-  @include box(204px, 45px);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  height: 45px;
+  flex-grow: 1;
+  width: 60%;
   font-size: inherit;
   line-height: inherit;
   font-family: inherit;
@@ -103,7 +148,7 @@
 
     @include box(8px);
     border-radius: 50%;
-    top: 12px;
+    top: 11px;
     left: 11px;
   }
 }
@@ -120,9 +165,21 @@
 
     @include box(8px);
     border-radius: 50%;
-    top: 12px;
+    top: 11px;
     left: 11px;
   }
+}
+
+.form__input--w-icon {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.form__input-icon {
+  position: absolute;
+  top: 20%;
+  right: 5%;
 }
 
 .form__input:focus + .form__input-icon {
@@ -144,7 +201,7 @@
   font-family: inherit;
   text-transform: uppercase;
 
-  @include box(280px, 150px);
+  @include box(100%, 150px);
   resize: none;
 }
 
@@ -198,4 +255,105 @@
 .form__explanation-text {
   font-size: $body-fs;
   line-height: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    font-size: $title-h3-fs;
+  }
+
+  .form__text {
+    width: 35%;
+  }
+
+  .form__input {
+    width: 75%;
+  }
+
+  .form__input--w-icon {
+    flex-grow: 1;
+  }
+
+  // не знаю как сделать так чтобы legend был width auto и чтобы
+  .form__legend {
+    font-size: $title-h1-fs;
+    line-height: 36px;
+
+    &::before {
+      content: "";
+      display: block;
+
+      @include box(100vw, 3px);
+      background-color: $green;
+      position: absolute;
+      top: 20%;
+      left: -105vw;
+    }
+  }
+
+  .form__button {
+    width: 283px;
+  }
+
+  .form__explanation-text {
+    padding-left: 61px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__text {
+    font-size: $title-h3-fs;
+    line-height: 30px;
+    width: 95%;
+  }
+
+  .form__input {
+    width: 70%;
+  }
+
+  .form__fieldset {
+    border: none;
+  }
+
+  .form__inner--row {
+    justify-content: space-between;
+  }
+
+  .form__fieldset--row-w-40 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 40%;
+  }
+
+  .form__input--w-icon {
+    width: 45%;
+    padding-right: 0;
+    padding-left: 0;
+
+    &:last-child {
+      margin-left: 10%;
+    }
+  }
+
+  .form__input--w-100 {
+    width: 100%;
+  }
+
+  .form__item-list--row {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .form__list-item {
+      width: 20%;
+    }
+  }
+
+  .form__inner-submit-block {
+    justify-content: flex-start;
+  }
+
+  .form__button {
+    width: 568px;
+  }
 }

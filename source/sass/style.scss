@@ -5,9 +5,9 @@
 @import "./blocks/list";
 @import "./blocks/text.scss";
 @import "./blocks/title";
-@import "./blocks/visually-hildden";
 @import "./blocks/buttons";
 @import "./blocks/table-cell.scss";
+@import "./blocks/inner.scss";
 @import "./blocks/header";
 @import "./blocks/main-nav.scss";
 @import "./blocks/footer";
@@ -19,9 +19,11 @@
 @import "./blocks/program-list";
 @import "./blocks/explanation.scss";
 @import "./blocks/demonstration.scss";
+@import "./blocks/progress.scss";
 @import "./blocks/catalog.scss";
 @import "./blocks/product-card.scss";
 @import "./blocks/show-more.scss";
 @import "./blocks/additional-products.scss";
 @import "./blocks/bonuses.scss";
 @import "./blocks/form.scss";
+@import "./blocks/visually-hildden";
