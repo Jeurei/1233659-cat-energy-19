@@ -10,16 +10,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 19px;
+  padding-top: 38px;
 }
 
 .footer__logo-link {
-  padding-bottom: 15px;
+  padding-bottom: 28px;
 }
 
 @media (min-width: $tablet-width) {
   .footer__inner {
     flex-direction: row;
     justify-content: space-between;
+    margin-right: 11.5%;
+    padding-right: 0;
+  }
+
+  .footer__logo-link {
+    padding-top: 27px;
   }
 }

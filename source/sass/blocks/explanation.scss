@@ -16,7 +16,7 @@
 .explanation__title {
   font-size: $title-h1-fs;
   line-height: $title-h1-lh;
-  padding-bottom: 17.5px;
+  padding-bottom: 28.5px;
 }
 
 .explanation__list {
@@ -69,6 +69,12 @@
 }
 
 @media (min-width: $tablet-width) {
+  .explanation {
+    padding-top: 16px;
+    padding-left: 27px;
+    padding-bottom: 0;
+  }
+
   .explanation__list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -77,18 +83,23 @@
   .explanation-list__item {
     width: 34%;
     display: flex;
-    margin-bottom: 63px;
-    padding-right: 40px;
+    margin-bottom: 19%;
+    padding-right: 33px;
 
     &:nth-child(2n) {
-      margin-left: auto;
+      margin-left: 20.5%;
+      padding: 0;
+
+      .explanation-list__text::after {
+        left: 46%;
+      }
     }
   }
 
   .explanation__title {
     font-size: $big-title-fs;
     line-height: $title-h1-lh;
-    padding-bottom: 63px;
+    padding-bottom: 72px;
   }
 
   .explanation-list__text {
@@ -99,6 +110,7 @@
 
     &::before {
       @include box(80px,80px);
+      margin-bottom: 30px;
     }
 
     &::after {
@@ -108,8 +120,8 @@
       color: $base-color;
       opacity: 0.1;
       position: absolute;
-      top: 45%;
-      left: 60%;
+      top: 55%;
+      left: 57%;
       font-family: $main-font;
     }
   }
@@ -137,8 +149,54 @@
 }
 
 @media (min-width: $desktop-width) {
+  .explanation {
+    margin-left: 15.6%;
+    padding-right: 43px;
+    padding-top: 3%;
+  }
+
+  .explanation__inner {
+    padding-left: 5px;
+    padding-right: 0;
+  }
+
+  .explanation__title {
+    font-size: 67px;
+    padding-bottom: 83px;
+  }
+
+  .explanation__list {
+    justify-content: space-between;
+  }
+
   .explanation-list__item {
     width: 25%;
-    padding-right: 120px;
+    margin-right: -5%;
+    margin-bottom: 0;
+
+    &:nth-child(2n) {
+      margin-left: 0;
+
+      .explanation-list__text::after {
+        left: 46%;
+      }
+    }
+  }
+
+  .explanation-list__text {
+    width: 80%;
+    font-size: 18px;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 40px;
+    }
+
+    &::after {
+      font-size: 313px;
+      top: 56%;
+      left: 54%;
+    }
   }
 }

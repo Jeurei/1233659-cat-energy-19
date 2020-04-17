@@ -3,11 +3,19 @@
   color: $base-color;
   font-size: 20px;
   line-height: $secondary-lh;
+  padding-top: 10px;
 }
 
 .header__link {
   padding-bottom: 15px;
   padding-top: 11px;
+  display: block;
+  width: 191px;
+  height: 39px;
+  background-image: url("../../img/logo-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 191px 39px;
 
   &:hover {
     opacity: 0.8;
@@ -23,6 +31,13 @@
     font-size: 18px;
     line-height: 25px;
   }
+
+  .header__link {
+    background-image: url("../../img/logo-tablet.svg");
+    width: 174px;
+    height: 59px;
+    background-size: 174px 59px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -37,27 +52,15 @@
 
   .header__link {
     margin-right: auto;
+    background-image: url("../../img/logo-desktop.svg");
+    width: 222px;
+    height: 72px;
+    background-size: 222px 72px;
   }
 
   .header--index {
     font-size: $title-h3-fs;
     line-height: $title-h3-lh;
-    background: linear-gradient(to right, $white 50%, $bg-green 50%);
-    // котик скрывается под градиентами не понимаю как его сделать видимым
-    &::after {
-      content: "";
-      display: block;
-      width: 50%;
-      min-height: 696px;
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      right: 0;
-      background-image: url("../img/index-background-desktop@1x.jpg");
-      background-color: $bg-green;
-      background-position: 0%;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+    background: linear-gradient(to right, $white 53.4%, $bg-green 53.4%);
   }
 }

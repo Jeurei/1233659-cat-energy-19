@@ -11,7 +11,7 @@ function initMap(ymaps) {
         iconLayout: "default#image",
         iconImageHref: "../img/map-pin.png",
         iconImageSize: [55, 53],
-        iconImageOffset: [-3, -42],
+        iconImageOffset: [-28, -42],
       }
     );
   myMap.controls.remove(`trafficControl`);
@@ -24,3 +24,7 @@ function initMap(ymaps) {
   myMap.controls.remove(`rulerControl`);
   myMap.geoObjects.add(myPlacemark);
 }
+document.querySelector(".progress__input").addEventListener("input",function(){
+  let value=this.value;
+  document.querySelector(".progress__result--before").style.width = value + "%";
+})

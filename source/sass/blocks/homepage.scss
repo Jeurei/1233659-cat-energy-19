@@ -1,5 +1,5 @@
 .homepage {
-  background: linear-gradient(to bottom, $bg-green 305px, $white 305px);
+  background: linear-gradient(to bottom, $bg-green 304px, $white 304px);
   color: $alt-base-color;
   background-repeat: no-repeat;
   background-position: top;
@@ -9,7 +9,7 @@
 }
 
 .homepage__inner {
-  padding-top: 29px;
+  padding-top: 25px;
   padding-bottom: 22px;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@
   font-size: $title-h1-fs;
   line-height: 36px;
   color: $white;
-  padding-bottom: 19px;
+  padding-bottom: 25px;
 }
 
 .homepage__text {
@@ -36,20 +36,25 @@
   padding-bottom: 29px;
 }
 
+.homepage__button {
+  margin-top: 3px;
+}
+
 @media (min-width: $tablet-width) {
   .homepage {
     background: none;
     background-color: $white;
     background-image: url("../img/index-can-tablet@1x.jpg");
     background-repeat: no-repeat;
-    background-position: bottom center;
-    min-height: 840px;
+    background-position: 45% 100%;
+    min-height: 864px;
+    padding-top: 29px;
   }
 
   .homepage__inner {
     background-image: none;
     text-align: left;
-    padding-left: 90px;
+    padding-left: 115px;
   }
 
   .homepage__title {
@@ -57,14 +62,14 @@
     width: 70%;
     line-height: $title-h1-lh;
     color: $base-color;
-    padding-bottom: 33px;
+    padding-bottom: 41px;
   }
 
   .homepage__text {
     color: $base-color;
     font-size: 20px;
     line-height: $secondary-lh;
-    padding-bottom: 48px;
+    padding-bottom: 45px;
   }
 
   .homepage__img {
@@ -74,23 +79,42 @@
   .homepage__button {
     width: 245px;
     height: 52px;
+    font-size: 20px;
+    line-height: $secondary-lh;
   }
 }
 
 @media (min-width: $desktop-width) {
   .homepage {
-    background-image: url("../img/index-can-desktop@1x.png"), url("../img/index-background-desktop@1x.jpg"), linear-gradient(to right, $white 50%, $bg-green 50%);
-    background-position: 60%, 100%, center;
-    background-size: 552px, 720px, 100%;
-    min-height: 696px;
+    // всё равно котик не залазит под навигацию :'c,может быть он должен быть на фоне хдереа?
+    background-image: url("../img/index-can-desktop@1x.png"), url("../img/index-background-desktop@1x.jpg"), linear-gradient(to right, $white 53.4%, $bg-green 53.4%);
+    background-position: 65% 30px, right -120px, center;
+    background-size: 611px, 749px 769px, 100%;
+    min-height: 651px;
     display: flex;
+    padding-top: 0;
+  }
+
+  .homepage__inner {
+    padding-top: 0;
+    padding-left: 188px;
   }
 
   .homepage__title {
-    font-size: $big-title-fs;
-    line-height: $title-h1-lh;
-    width: 40%;
-    padding-top: 113px;
-    padding-bottom: 33px;
+    font-size: 67px;
+    line-height: 67px;
+    width: 41%;
+    padding-top: 120px;
+    padding-bottom: 50px;
+  }
+
+  .homepage__text {
+    font-size: 22px;
+    padding-bottom: 56px;
+  }
+
+  .homepage__button {
+    width: 272px;
+    height: 58px;
   }
 }

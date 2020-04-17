@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 15px;
-  padding-bottom: 13px;
+  padding-bottom: 26px;
 }
 
 .adress__title {
@@ -21,7 +21,7 @@
 }
 
 .adress__map {
-  @include box(100%, 320px);
+  @include box(100%, 363px);
 }
 
 @media (min-width: $tablet-width) {
@@ -30,14 +30,28 @@
     padding-top: 34px;
   }
 
+  .adress__inner {
+    padding-left: 69px;
+    padding-right: 72px;
+    padding-top: 5px;
+  }
+
   .adress__title {
     font-size: $title-h3-fs;
     line-height: $title-h3-lh;
     width: 20%;
+    padding-top: 7px;
   }
 
   .adress__text {
-    width: 20%;
+    width: 30%;
+    padding-top: 7px;
+    text-align: right;
+  }
+
+  .adress__city {
+    display: block;
+    padding-top: 20px;
   }
 
   .adress__map {
@@ -53,7 +67,7 @@
   }
 
   .adress__inner {
-    width: 570px;
+    width: 636px;
     position: absolute;
     z-index: 2;
     min-height: 201px;
@@ -68,5 +82,6 @@
 
   .adress__text {
     width: 31%;
+    text-align: left;
   }
 }
