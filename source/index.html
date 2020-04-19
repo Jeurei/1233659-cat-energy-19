@@ -15,13 +15,13 @@
         ></a>
         <button
           type="button"
-          class="main-nav__toggle main-nav__toggle--close"
+          class="main-nav__toggle main-nav__toggle--nojs"
           aria-label="Кнопка разворачивающая меню навигации"
         ></button>
         <h2 class="main-nav__title visually-hidden">
           Меню навигации по сайту
         </h2>
-        <ul class="list main-nav__nav-list nav-list">
+        <ul class="list main-nav__nav-list nav-list nav-list--active">
           <li class="nav-list__item">
             <a
               class="nav-list__link nav-list__link--active"
@@ -46,33 +46,34 @@
             >
           </li>
         </ul>
+        <section class="homepage">
+          <div class="homepage__inner inner">
+            <h2 class="title homepage__title">
+              Функциональное питание для котов
+            </h2>
+            <p class="text homepage__text">Занялся собой? Займись котом!</p>
+            <img
+              src="./img/index-can-mobile@1x.png"
+              width="280"
+              height="270"
+              alt="Our product image"
+              class="homepage__img"
+            />
+            <a
+              href="./form.html"
+              class="homepage__button button"
+              aria-label="Ссылка на страницу с каталогом программ"
+              >Подобрать программу</a
+            >
+          </div>
+        </section>
       </nav>
     </header>
     <main class="main">
       <h1 class="title main__title visually-hidden">
         Магазин питания для котов Cat Energy
       </h1>
-      <section class="homepage">
-        <div class="homepage__inner inner">
-          <h2 class="title homepage__title">
-            Функциональное питание для котов
-          </h2>
-          <p class="text homepage__text">Занялся собой? Займись котом!</p>
-          <img
-            src="./img/index-can-mobile@1x.png"
-            width="280"
-            height="270"
-            alt="Our product image"
-            class="homepage__img"
-          />
-          <a
-            href="./form.html"
-            class="homepage__button button"
-            aria-label="Ссылка на страницу с каталогом программ"
-            >Подобрать программу</a
-          >
-        </div>
-      </section>
+
       <section class="program-list">
         <div class="program-list__inner inner">
           <h2 class="title program-list__title visually-hidden">
@@ -83,10 +84,9 @@
               Похудение
             </h3>
             <p class="text program__text program__text--slim">
-              Ваш кот весит больше собаки и
-              почти утратил способность лазить по деревьям? Пора
-              на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний
-              вес.
+              Ваш кот весит больше собаки и почти утратил способность лазить по
+              деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
+              сбросить лишний вес.
             </p>
             <a
               class="program__link"
@@ -126,8 +126,8 @@
               <p
                 class="text explanation-list__text explanation-list__text--powder"
               >
-                Выпускается в виде порошка, который нужно лишь
-                залить кипятком и готово.
+                Выпускается в виде порошка, который нужно лишь залить кипятком и
+                готово.
               </p>
             </li>
             <li class="explanation-list__item">
@@ -142,8 +142,8 @@
               <p
                 class="text explanation-list__text explanation-list__text--clock"
               >
-                Уже&nbsp;через&nbsp;месяц&nbsp;наслаждайтесь изменениями к
-                лучшему вашего&nbsp;питомца!
+                Уже через месяц наслаждайтесь изменениями к лучшему<br class="explanation__br">вашего
+                питомца!
               </p>
             </li>
           </ul>
@@ -156,7 +156,7 @@
             <p class="text demonstration__text">
               Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
               на Cat Energy&nbsp;Slim. Отличный результат без изнуряющих
-              тренировок! При этом он не менял своих привычек и по-прежнему спит
+              тренировок! При этом он не менял своих привычек и по‑прежнему спит
               по 16 часов в день.
             </p>
             <ul class="list demonstration__stats stats-list">
@@ -172,16 +172,15 @@
               </li>
             </ul>
             <p class="demonstration__caption">
-              Затраты на питание: <span class="demonstration__caption-price">15 000 руб.</span>
+              Затраты на питание:
+              <span class="demonstration__caption-price">15 000 руб.</span>
             </p>
           </div>
           <div class="demonstration__progress progress">
             <div class="progress__image-slides">
               <ul class="list progress__slides-list">
-                <li class="progress__result progress__result--before">
-                </li>
-                <li class="progress__result progress__result--after">
-                </li>
+                <li class="progress__result progress__result--before"></li>
+                <li class="progress__result progress__result--after"></li>
               </ul>
             </div>
             <div class="progress__slider-controls">
@@ -191,7 +190,14 @@
               >
                 Было
               </button>
-              <input type="range" class="progress__input" min="0" max="100" step="1" value="50"/>
+              <input
+                type="range"
+                class="progress__input"
+                min="0"
+                max="100"
+                step="1"
+                value="50"
+              />
               <div class="progress__slider-line">
                 <div class="progress__slider-thumb"></div>
               </div>
@@ -213,7 +219,8 @@
             Приглашаем к&nbsp;сотрудничеству дилеров!
           </h2>
           <p class="text adress__text">
-            ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 <span class="adress__city">Санкт-Петербург</span>
+            ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8
+            <span class="adress__city">Санкт-Петербург</span>
           </p>
         </div>
         <div class="adress__map"></div>
@@ -293,8 +300,8 @@
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="25px"
-                height="17px"
+                width="30px"
+                height="16px"
                 x="0px"
                 y="0px"
                 viewBox="0 0 22 12"
@@ -316,8 +323,8 @@
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="17px"
-                height="17px"
+                width="23px"
+                height="23px"
                 x="0px"
                 y="0px"
                 viewBox="0 0 16.1 16"
@@ -345,8 +352,8 @@
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="15px"
-                height="24px"
+                width="14px"
+                height="28px"
                 x="0px"
                 y="0px"
                 viewBox="0 0 10 19"
@@ -370,6 +377,7 @@
             <p class="copyright__text">HTML Academy</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
+              class="copyright__icon"
               width="40px"
               height="40px"
               viewBox="0 0 60 60"

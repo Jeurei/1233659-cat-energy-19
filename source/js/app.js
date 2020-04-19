@@ -24,6 +24,15 @@ function initMap(ymaps) {
   myMap.controls.remove(`rulerControl`);
   myMap.geoObjects.add(myPlacemark);
 }
+let div
+document.querySelector(".main-nav__toggle").classList.remove("main-nav__toggle--nojs")
+document.querySelector(".nav-list").classList.remove("nav-list--active")
+document.querySelector(".main-nav__toggle").addEventListener("click",function(){
+  let button = document.querySelector(".main-nav__toggle")
+  let nav = document.querySelector(".nav-list")
+  button.classList.toggle("main-nav__toggle--close")
+  nav.classList.toggle("nav-list--active")
+})
 document.querySelector(".progress__input").addEventListener("input",function(){
   let value=this.value;
   document.querySelector(".progress__result--before").style.width = value + "%";

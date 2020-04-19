@@ -18,24 +18,25 @@
 
 .progress__slides-list {
   display: flex;
+  transform: translateX(154px);
 }
 
 .progress__result {
   flex-shrink: 0;
-  background-position: center;
+  background-position: 0 -8px;
   background-repeat: no-repeat;
 
   &--before {
     width: 312px;
     height: 232px;
-    background-image: url("../../img/before-mobile@1x.png");
+    background-image: url("../img/before-mobile@1x.png");
     background-size: 312px 232px;
   }
 
   &--after {
     width: 311px;
     height: 232px;
-    background-image: url("../../img/after-mobile@1x.png");
+    background-image: url("../img/after-mobile@1x.png");
     background-size: 311px 232px;
   }
 }
@@ -109,20 +110,24 @@
     background-position: 0 0;
 
     &--before {
-      background-image: url("../../img/before-tablet@1x.png"), linear-gradient(to bottom, $white 28%, $alt-bg-color 28%);
+      background-image: url("../img/before-tablet@1x.png"), linear-gradient(to bottom, $white 28%, $alt-bg-color 28%);
       background-size: 636px 517px, 100% 100%;
       z-index: 2;
       width: 45%;
     }
 
     &--after {
-      background-image: url("../../img/after-tablet@1x.png");
+      background-image: url("../img/after-tablet@1x.png");
       background-size: 636px 517px;
     }
   }
 
+  .progress__slides-list {
+    transform: translateX(0);
+  }
+
   .progress__slider-controls {
-    width: 83%;
+    width: 100%;
     justify-content: flex-start;
     padding-top: 21px;
   }
@@ -206,7 +211,12 @@
   }
 
   .progress__slider-button:first-of-type {
-    margin-right: 21px;
+    padding-left: 66px;
+    margin-right: 17px;
+  }
+
+  .progress__slider-button:last-of-type {
+    padding-right: 70px;
   }
 
   .progress__slider-line {
@@ -227,22 +237,37 @@
   }
 
   .progress__image-slides {
-    min-height: 589px;
+    min-height: 541px;
+    padding: 0;
   }
 
   .progress__result {
     min-height: 589px;
-    top: -11px;
-    left: -5%;
+    top: 10px;
+    left: -12px;
 
     &--before {
-      background-image: url("../../img/before-desktop@1x.png");
-      background-size: 636px 589px;
+      background-image: url("../img/before-desktop@1x.png"), linear-gradient(to bottom, $white 31.9%, $alt-bg-color 31.9%);
+      background-size: 636px 499px, 100%;
+      height: 499px;
+      width: 50%;
+      background-color: $bg-color;
+      background-position: -9px 0, center;
     }
 
     &--after {
-      background-image: url("../../img/after-desktop@1x.png");
-      background-size: 636px 589px;
+      background-image: url("../img/after-desktop@1x.png");
+      background-size: 642px 517px;
+      height: 517px;
     }
+  }
+
+  .progress__slider-button:first-of-type {
+    margin-right: 19px;
+    padding-left: 39px;
+  }
+
+  .progress__slider-button:last-of-type {
+    margin-right: -5px;
   }
 }

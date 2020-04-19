@@ -6,6 +6,19 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  padding-bottom: 19px;
+}
+
+.form__main-title {
+  font-size: $title-h1-fs;
+  line-height: $title-h1-lh;
+  margin-top: 13px;
+  margin-bottom: 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .form__inner {
@@ -20,9 +33,8 @@
 .form__text {
   font-size: $body-fs;
   text-transform: uppercase;
-  width: 81%;
+  width: 90%;
   color: $base-color;
-  padding-bottom: 39px;
 }
 
 .form__fieldset {
@@ -35,6 +47,12 @@
   align-items: flex-start;
   padding: 0;
   margin: 0;
+  margin-top: 21px;
+  padding-bottom: 24px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
 }
 
 .form__fieldset--row {
@@ -43,15 +61,13 @@
   align-items: center;
 }
 
-
-// вопрос по поводу блока <legend>Контактные данные (владельца кота) полосочка уезжает за пределы окна,мне её как то отедельно нужно спозиционировать или можно что то придумать с шириной?
 .form__legend {
   font-size: $title-h2-fs;
   font-family: $title-h2-lh;
   position: relative;
   padding-left: 0;
-  padding-bottom: 35px;
-  width: auto;
+  padding-bottom: 15px;
+  padding-top: 9px;
 
   &::after {
     content: "";
@@ -60,7 +76,15 @@
     @include box(100vw, 3px);
     background-color: $green;
     position: absolute;
-    top: 20%;
+    top: 0.8em;
+    left: 120%;
+  }
+}
+// legend контактные данные владельца слишком большой поэтому меняю width
+.form__legend--w-70 {
+  width: 70%;
+
+  &::after {
     left: 110%;
   }
 }
@@ -80,7 +104,7 @@
 .form__label {
   text-transform: uppercase;
   position: relative;
-  margin-right: 5%;
+  margin-right: 15px;
 }
 
 .form__label--checkable {
@@ -91,13 +115,14 @@
 .form__input {
   border: 1px solid $border-color;
   text-transform: uppercase;
-  margin-bottom: 14px;
   height: 45px;
-  flex-grow: 1;
+  padding-left: 17px;
   width: 60%;
   font-size: inherit;
   line-height: inherit;
   font-family: inherit;
+  flex-grow: 1;
+  flex-shrink: 0;
 
   &:focus {
     border-color: $base-color;
@@ -107,6 +132,18 @@
     border-color: $invalid;
   }
 }
+// длиннюшие костыли
+.form__input:first-of-type {
+  flex-grow: 3;
+  min-width: 80%;
+}
+
+.form__input:nth-of-type(2) {
+  flex-grow: 2;
+  min-width: 70%;
+}
+// мне кажется это совсем не верно,но тогда как спозиционировать,по другому?
+
 
 .form__input--radio + .form__label {
   &::before {
@@ -174,6 +211,15 @@
   position: relative;
   display: flex;
   width: 100%;
+  padding-left: 0;
+  align-items: center;
+  border: none;
+  margin-top: 19px;
+
+  .form__input {
+    padding-left: 12px;
+    min-width: auto;
+  }
 }
 
 .form__input-icon {
@@ -200,6 +246,9 @@
   line-height: inherit;
   font-family: inherit;
   text-transform: uppercase;
+  margin-top: 19px;
+  padding-top: 12px;
+  padding-left: 14px;
 
   @include box(100%, 150px);
   resize: none;
@@ -255,26 +304,54 @@
 .form__explanation-text {
   font-size: $body-fs;
   line-height: 16px;
+  margin-top: 16px;
+}
+
+.form__item-list--row {
+  padding-top: 20px;
+}
+
+.form__inner-submit-block {
+  padding-top: 8px;
 }
 
 @media (min-width: $tablet-width) {
   .form {
     font-size: $title-h3-fs;
+    line-height: 30px;
+  }
+
+  .form__main-title {
+    line-height: 60px;
+    margin-top: 56px;
+    margin-bottom: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    font-size: $big-title-fs;
+  }
+
+  .form__inner {
+    padding-left: 40px;
+    padding-top: 27px;
   }
 
   .form__text {
-    width: 35%;
-  }
-
-  .form__input {
-    width: 75%;
+    font-size: inherit;
+    width: 60%;
+    padding-left: 39px;
   }
 
   .form__input--w-icon {
     flex-grow: 1;
   }
 
-  // не знаю как сделать так чтобы legend был width auto и чтобы
+  .form__fieldset {
+    padding-right: 35px;
+  }
+
   .form__legend {
     font-size: $title-h1-fs;
     line-height: 36px;

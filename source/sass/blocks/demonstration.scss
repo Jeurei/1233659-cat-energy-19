@@ -2,16 +2,16 @@
   font-size: $body-fs;
   line-height: 18px;
   background-color: $alt-bg-color;
-  padding-top: 19px;
-  padding-bottom: 27px;
 }
 
 .demonstration__inner {
+  padding-top: 19px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
+  overflow: hidden;
 }
 
 .demonstration__descr {
@@ -101,23 +101,21 @@
     font-size: $secondary-fs;
     line-height: 24px;
     background: linear-gradient(to bottom, $white 52.5%, $alt-bg-color 52.5%);
-    padding-top: 14px;
     padding-bottom: 0;
+    margin-top: -27px;
   }
 
   .demonstration__inner {
-    padding-left: 26px;
-    padding-right: 35px;
+    padding-top: 0;
   }
 
   .demonstration__title {
     font-size: $big-title-fs;
     line-height: $title-h1-lh;
-    padding-bottom: 9%;
+    padding-bottom: 63px;
   }
 
   .demonstration__text {
-    width: 99%;
     padding-bottom: 44px;
   }
 
@@ -155,56 +153,59 @@
     font-size: $title-h3-fs;
     line-height: 29px;
     margin-top: 16px;
+    flex-direction: column;
+  }
+
+  .demonstration__caption-price {
+    margin-left: auto;
   }
 }
 
 @media (min-width: $desktop-width) {
   .demonstration {
-    background: linear-gradient(to bottom, $white 32.6%, $alt-bg-color 32.6%);
-    padding-top: 149px;
+    background: linear-gradient(to bottom, $white 33.5%, $alt-bg-color 33.5%);
+    padding: 0;
+    margin-top: 0;
   }
 
   .demonstration__title {
-    font-size: 67px;
     padding-bottom: 0;
   }
 
   .demonstration__inner {
     align-items: flex-start;
-    margin-left: 16%;
+    padding-top: 96px;
   }
 
   .demonstration__descr {
     width: 50%;
     align-items: center;
-    padding-top: 167px;
-    font-size: 18px;
-    line-height: 27px;
+    padding-top: 145px;
+    padding-right: 170px;
   }
 
   .demonstration__text {
-    width: 71%;
-    padding-bottom: 74px;
+    padding-bottom: 70px;
   }
 
   .demonstration__caption {
     width: 100%;
-    padding-right: 48%;
+    padding-right: 112px;
+    flex-direction: row;
   }
 
   .stats-list {
-    width: 60%;
-    padding-bottom: 54px;
+    width: 100%;
+    padding-right: 73px;
+    padding-bottom: 44px;
   }
 
   .stats-list__item {
-    padding-top: 23px;
-    padding-bottom: 12px;
+    width: 50%;
+    padding-top: 15px;
+    padding-bottom: 14px;
   }
 
-  .stats-list__value {
-    font-size: 37px;
-  }
 
   .demonstration__caption-price {
     margin-left: auto;

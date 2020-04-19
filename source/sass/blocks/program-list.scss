@@ -69,7 +69,6 @@
   padding-top: 24px;
   padding-bottom: 23px;
   width: 100%;
-  padding-left: 7px;
 }
 
 .program__link {
@@ -105,14 +104,14 @@
 
   .program {
     min-height: 372px;
-    padding-right: 40%;
-    padding-left: 45px;
+    padding-right: 282px;
+    padding-left: 49px;
     padding-bottom: 36px;
     margin-bottom: 29px;
   }
 
   .program--pro {
-    padding-right: 45%;
+    padding-right: 313px;
   }
 
   .program__title {
@@ -145,8 +144,8 @@
       display: block;
       background-color: $bg-green;
       border-radius: 50%;
-      top: -42%;
-      right: -57%;
+      top: -44%;
+      right: -59%;
     }
 
     &::before {
@@ -159,8 +158,8 @@
       background-position: center;
       background-size: 141px 196px;
       background-image: url("../img/icon-cat-slim.svg");
-      top: -55%;
-      right: -49%;
+      top: -57%;
+      right: -51%;
       z-index: 2;
     }
   }
@@ -177,7 +176,7 @@
       background-position: center;
       background-size: 268px 113px;
       background-image: url("../img/icon-cat-pro.svg");
-      top: -2%;
+      top: -3%;
       right: -83%;
       z-index: 2;
     }
@@ -186,6 +185,7 @@
   .program__link {
     font-size: 20px;
     line-height: 20px;
+    margin-bottom: -9px;
     border: none;
 
     &::after {
@@ -195,73 +195,63 @@
 }
 
 @media (min-width: $desktop-width) {
-  .program-list {
-    padding-top: 90px;
-  }
-
   .program-list__inner {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
-    padding-left: 60px;
-    padding-right: 14px;
-    margin-right: 5px;
-    margin-left: 14%;
+    padding-top: 80px;
   }
 
   .program {
     align-items: stretch;
-    width: 46.5%;
-    min-height: 372px;
-    padding-right: 0;
+    width: 50%;
+    padding: 0;
+    padding-left: 52px;
+    padding-top: 41px;
 
     &--slim {
-      margin-right: auto;
+      margin-right: 80px;
     }
   }
 
   .program__title {
-    line-height: 37px;
-    padding-left: 34%;
-    padding-top: 55px;
-    font-size: 40px;
+    padding: 0;
+    padding-left: 163px;
+    padding-top: 4px;
 
     &::before {
       display: block;
-      width: 110px;
-      height: 110px;
-      top: 22px;
-      left: 18px;
+      width: 100px;
+      height: 100px;
+      top: 4px;
+      left: 0;
     }
 
     &::after {
       display: block;
-      width: 108px;
-      height: 108px;
-      background-size: 108px 108px;
-      left: 4%;
-      top: 16px;
+      width: 71px;
+      height: 97px;
+      background-size: 71px 97px;
+      left: 14px;
+      top: -2px;
     }
   }
 
   .program__title--pro {
     &::after {
-      width: 153px;
-      height: 65px;
-      background-size: 153px 65px;
-      top: 48%;
-      left: -4%;
+      width: 134px;
+      height: 57px;
+      background-size: 134px 57px;
+      top: 25px;
+      left: -17px;
     }
   }
 
   .program__text {
-    padding-top: 81px;
-    padding-left: 14px;
-    width: 89%;
-    font-size: 17px;
-    line-height: 27px;
-    padding-bottom: 19px;
+    padding: 0;
+    padding-top: 44px;
+    padding-right: 30px;
 
     &::after {
       display: none;
@@ -273,19 +263,13 @@
   }
 
   .program__link {
-    padding-left: 14px;
-    font-size: 23px;
-    padding-bottom: 36px;
+    padding: 0;
+    margin-top: -25px;
+    width: auto;
 
     &::after {
-      left: 28%;
-      top: 32.5%;
-    }
-  }
-
-  .program--pro {
-    .program__link::after {
-      left: 25%;
+      left: 125%;
+      top: 3px;
     }
   }
 }

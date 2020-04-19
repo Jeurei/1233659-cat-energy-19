@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 38px;
+  padding-top: 35px;
 }
 
 .footer__logo-link {
@@ -21,11 +21,25 @@
   .footer__inner {
     flex-direction: row;
     justify-content: space-between;
-    margin-right: 11.5%;
-    padding-right: 0;
   }
 
   .footer__logo-link {
     padding-top: 27px;
+    width: 33%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer {
+    padding-bottom: 62px;
+    margin-top: -31px;
+  }
+
+  .footer__inner {
+    padding-top: 35px;
+  }
+
+  .footer__logo-link {
+    padding-top: 13px;
   }
 }
