@@ -344,12 +344,55 @@
     padding-left: 39px;
   }
 
+  .form__label {
+    margin-top: -31px;
+  }
+
+  .form__item-list {
+    margin-top: -7px;
+    margin-left: -21px;
+    padding-top: 8px;
+  }
+
+  .form__list-item {
+    padding-bottom: 23px;
+  }
+
+  .form__list-item .form__label {
+    margin-top: 0;
+    padding-left: 57px;
+  }
+
+  .form__input--radio + .form__label::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .form__input--radio:checked + .form__label::after {
+    width: 18px;
+    height: 18px;
+  }
+
+  .form__input--radio:checked:active + .form__label::after {
+    width: 18px;
+    height: 18px;
+  }
+
+  .form__input {
+    margin-bottom: 29px;
+  }
+
   .form__input--w-icon {
     flex-grow: 1;
   }
 
   .form__fieldset {
     padding-right: 35px;
+    border: none;
+  }
+
+  .form__fieldset--w-list {
+    border: 1px solid $border-color;
   }
 
   .form__legend {
