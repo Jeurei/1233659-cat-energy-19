@@ -111,7 +111,7 @@
     background-position: 0 0;
 
     &--before {
-      background-image: url("../img/before-tablet@1x.png"), linear-gradient(to bottom, $white 28%, $alt-bg-color 28%);
+      background-image: url("../img/before-tablet@1x.png"), linear-gradient(to bottom, $white 29.4%, $alt-bg-color 29.4%);
       background-size: 636px 517px, 100% 100%;
       z-index: 2;
       width: 45%;
@@ -269,4 +269,3 @@
     margin-right: -5px;
   }
 }
-
