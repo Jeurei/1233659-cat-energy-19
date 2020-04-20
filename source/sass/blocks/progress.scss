@@ -115,12 +115,13 @@
       background-size: 636px 517px, 100% 100%;
       z-index: 2;
       width: 45%;
+      opacity: 1;
     }
 
     &--after {
       background-image: url("../img/after-tablet@1x.png");
       background-size: 636px 517px;
-    }
+      opacity: 1;
   }
 
   .progress__slides-list {
