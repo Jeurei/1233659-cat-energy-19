@@ -60,6 +60,14 @@
   .header {
     font-size: 18px;
     line-height: 25px;
+
+    .main-nav__toggle {
+      display: none;
+    }
+
+    .nav-list {
+      display: flex;
+    }
   }
 
   .header__link {
