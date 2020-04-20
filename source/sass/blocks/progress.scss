@@ -123,154 +123,150 @@
       background-size: 636px 517px;
       opacity: 1;
     }
+  }
 
-    .progress__slides-list {
-      transform: translateX(0);
-    }
+  .progress__slider-controls {
+    width: 100%;
+    justify-content: flex-start;
+    padding-top: 21px;
+  }
 
-    .progress__slider-controls {
-      width: 100%;
-      justify-content: flex-start;
-      padding-top: 21px;
-    }
+  .progress__input {
+    display: block;
+    flex-grow: 1;
+    background: transparent;
+    appearance: none;
 
-
-    .progress__input {
-      display: block;
-      flex-grow: 1;
-      background: transparent;
+    &::-webkit-slider-thumb {
       appearance: none;
-
-      &::-webkit-slider-thumb {
-        appearance: none;
-        border: 12px solid $white;
-        width: 34px;
-        height: 34px;
-        border-radius: 50%;
-        box-shadow: $checkable-inputs-bs;
-        background-color: $bg-green;
-        margin-top: -13px;
-      }
-
-      &::-webkit-slider-runnable-track {
-        height: 6px;
-        background-color: #dcdcdc;
-        border-radius: 2.5px;
-        border: none;
-      }
-
-      &::-moz-range-thumb {
-        border: 10.5px solid $white;
-        width: 10.5px;
-        height: 10.5px;
-        border-radius: 50%;
-        box-shadow: $checkable-inputs-bs;
-        background-color: $bg-green;
-      }
-
-      &::-moz-range-track {
-        height: 6px;
-        background-color: #dcdcdc;
-        border-radius: 2.5px;
-        border: none;
-      }
-
-      &:focus {
-        outline: none;
-      }
-
-      &::-ms-track {
-        width: 100%;
-        cursor: pointer;
-        background: transparent;
-        border-color: transparent;
-        color: transparent;
-        height: 6px;
-        background-color: #dcdcdc;
-        border-radius: 2.5px;
-        border: none;
-        margin-top: 15px;
-        margin-bottom: 20px;
-        transform: translateY(6px);
-      }
-
-      &::-ms-thumb {
-        border: 10.5px solid $white;
-        width: 10.5px;
-        height: 10.5px;
-        border-radius: 50%;
-        box-shadow: $checkable-inputs-bs;
-        background-color: $bg-green;
-      }
-
-      &::-ms-fill-lower {
-        background: transparent;
-      }
-
-      &::-ms-fill-upper {
-        background: transparent;
-      }
+      border: 12px solid $white;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      box-shadow: $checkable-inputs-bs;
+      background-color: $bg-green;
+      margin-top: -13px;
     }
 
-    .progress__slider-button:first-of-type {
-      padding-left: 66px;
-      margin-right: 17px;
+    &::-webkit-slider-runnable-track {
+      height: 6px;
+      background-color: #dcdcdc;
+      border-radius: 2.5px;
+      border: none;
     }
 
-    .progress__slider-button:last-of-type {
-      padding-right: 70px;
+    &::-moz-range-thumb {
+      border: 10.5px solid $white;
+      width: 10.5px;
+      height: 10.5px;
+      border-radius: 50%;
+      box-shadow: $checkable-inputs-bs;
+      background-color: $bg-green;
     }
 
-    .progress__slider-line {
-      display: none;
+    &::-moz-range-track {
+      height: 6px;
+      background-color: #dcdcdc;
+      border-radius: 2.5px;
+      border: none;
     }
 
-    .progress__slider-thumb {
-      display: none;
+    &:focus {
+      outline: none;
+    }
+
+    &::-ms-track {
+      width: 100%;
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+      height: 6px;
+      background-color: #dcdcdc;
+      border-radius: 2.5px;
+      border: none;
+      margin-top: 15px;
+      margin-bottom: 20px;
+      transform: translateY(6px);
+    }
+
+    &::-ms-thumb {
+      border: 10.5px solid $white;
+      width: 10.5px;
+      height: 10.5px;
+      border-radius: 50%;
+      box-shadow: $checkable-inputs-bs;
+      background-color: $bg-green;
+    }
+
+    &::-ms-fill-lower {
+      background: transparent;
+    }
+
+    &::-ms-fill-upper {
+      background: transparent;
     }
   }
 
-  @media (min-width: $desktop-width) {
-    .progress {
-      width: 50%;
-      padding-top: 0;
-      // не придумал как маринами/паддингами спозиционировать,вообще мне кажется,что в целом у меня с десктопной версиией что то не так шрифты не сходятся с макетом и пиксельперфектом размеры тоже маргины большие и паддинги лучше дождусь коментария
-      margin-top: -124px;
-    }
+  .progress__slider-button:first-of-type {
+    padding-left: 66px;
+    margin-right: 17px;
+  }
 
-    .progress__image-slides {
-      min-height: 541px;
-      padding: 0;
-    }
+  .progress__slider-button:last-of-type {
+    padding-right: 70px;
+  }
 
-    .progress__result {
-      min-height: 589px;
-      top: 10px;
-      left: -12px;
+  .progress__slider-line {
+    display: none;
+  }
 
-      &--before {
-        background-image: url("../img/before-desktop@1x.png"), linear-gradient(to bottom, $white 33.2%, $alt-bg-color 33.2%);
-        background-size: 636px 499px, 100%;
-        height: 499px;
-        width: 50%;
-        background-color: $bg-color;
-        background-position: -9px 0, center;
-      }
-
-      &--after {
-        background-image: url("../img/after-desktop@1x.png");
-        background-size: 642px 517px;
-        height: 517px;
-      }
-    }
-
-    .progress__slider-button:first-of-type {
-      margin-right: 19px;
-      padding-left: 39px;
-    }
-
-    .progress__slider-button:last-of-type {
-      margin-right: -5px;
-    }
+  .progress__slider-thumb {
+    display: none;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .progress {
+    width: 50%;
+    padding-top: 0;
+    // не придумал как маринами/паддингами спозиционировать,вообще мне кажется,что в целом у меня с десктопной версиией что то не так шрифты не сходятся с макетом и пиксельперфектом размеры тоже маргины большие и паддинги лучше дождусь коментария
+    margin-top: -124px;
+  }
+
+  .progress__image-slides {
+    min-height: 541px;
+    padding: 0;
+  }
+
+  .progress__result {
+    min-height: 589px;
+    top: 10px;
+    left: -12px;
+
+    &--before {
+      background-image: url("../img/before-desktop@1x.png"), linear-gradient(to bottom, $white 33.2%, $alt-bg-color 33.2%);
+      background-size: 636px 499px, 100%;
+      height: 499px;
+      width: 50%;
+      background-color: $bg-color;
+      background-position: -9px 0, center;
+    }
+
+    &--after {
+      background-image: url("../img/after-desktop@1x.png");
+      background-size: 642px 517px;
+      height: 517px;
+    }
+  }
+
+  .progress__slider-button:first-of-type {
+    margin-right: 19px;
+    padding-left: 39px;
+  }
+
+  .progress__slider-button:last-of-type {
+    margin-right: -5px;
+  }
+}
+
