@@ -3,6 +3,33 @@
   color: $base-color;
   font-size: 20px;
   line-height: $secondary-lh;
+
+  .nav-list {
+    display: none;
+  }
+
+  .main-nav__toggle {
+    display: block;
+  }
+
+  .nav-list--active {
+    border-top: 1px solid $border-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.header--nojs {
+  .nav-list {
+    display: flex;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
 }
 
 .header__link {

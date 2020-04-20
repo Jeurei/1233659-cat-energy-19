@@ -162,6 +162,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .explanation {
+    padding-bottom: 29px;
+  }
+
   .explanation__inner {
     padding: 0;
     padding-top: 40px;
@@ -172,7 +176,7 @@
   }
 
   .explanation__title {
-    padding-bottom: 71px;
+    padding-bottom: 73px;
   }
 
   .explanation-list__item {
@@ -186,19 +190,19 @@
       margin-right: 0;
       padding-right: 0;
       padding-left: 0;
-
-      .explanation-list__text::after {
-        left: 48%;
-      }
     }
   }
 
-  // не придумал как сделать этот эффект,чтобы в начале прижималось к правому краю а в конце к левому причём по середине ещё и отступы не понятные
-  .explanation-list__item:nth-child(2) {
+
+  .explanation-list__item:nth-child(even) {
     padding-left: 19px;
+
+    .explanation-list__text::after {
+      left: 48%;
+    }
   }
 
-  .explanation-list__item:nth-child(3) {
+  .explanation-list__item:nth-child(odd) {
     padding-left: 40px;
 
     .explanation-list__text {
@@ -208,8 +212,17 @@
     }
   }
 
+  .explanation-list__item:first-of-type {
+    padding-left: 0;
+  }
+
   .explanation-list__item:last-of-type {
+    padding-left: 16px;
     justify-content: flex-end;
+
+    .explanation-list__text {
+      width: 85%;
+    }
   }
 
   .explanation-list__text {

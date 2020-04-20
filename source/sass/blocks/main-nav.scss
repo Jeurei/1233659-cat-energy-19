@@ -25,23 +25,6 @@
   background-image: url("../img/icon-close.svg");
 }
 
-.main-nav__toggle--nojs {
-  display: none;
-}
-
-.nav-list {
-  display: none;
-
-  &--active {
-    border-top: 1px solid $border-color;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-}
-
 .nav-list__item {
   border-bottom: 1px solid $border-color;
   width: 100%;

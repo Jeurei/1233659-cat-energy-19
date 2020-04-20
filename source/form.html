@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header header--nojs">
       <nav class="header__main-nav main-nav inner">
         <a
           href="./index.html"
@@ -18,7 +18,7 @@
         </a>
         <h2 class="main-nav__title visually-hidden">Меню навигации по сайту</h2>
         <button
-          class="main-nav__toggle main-nav__toggle--nojs"
+          class="main-nav__toggle"
           aria-label="Кнопка разворачивающая меню навигации"
         ></button>
         <ul class="list main-nav__nav-list nav-list">
@@ -58,59 +58,66 @@
           Заполните анкету и мы подберем программу питания для вашего кота
         </p>
         <div class="form__inner form__inner--row">
-          <!-- может быть стоит обернуть всё это в обертки? Сложно как то спозиционировать -->
           <fieldset
-            class="form__fieldset form__fieldset--row form__fieldset--row-w-40"
+            class="form__fieldset form__fieldset--row"
           >
             <legend class="form__legend form__inner visually-hidden">
               Данные питомца
             </legend>
-            <label for="pet-name" class="form__label">Имя:<sup>*</sup></label>
-            <input
-              type="text"
-              name="pet-name"
-              id="pet-name"
-              class="form__input"
-              required
-              placeholder="Барсик"
-              aria-describedby="pet-name-descr"
-            />
-            <p class="visually-hidden" id="pet-name-descr">
-              Напишите здесь имя питомца например:Барсик.Обязательное поле
-            </p>
-            <label for="pet-weight" class="form__label"
-              >Вес (кг):<sup>*</sup></label
-            >
-            <input
-              type="text"
-              name="pet-weight"
-              id="pet-weight"
-              class="form__input"
-              pattern="[0-9]{2}"
-              required
-              placeholder="7"
-              aria-describedby="pet-weight-description"
-            />
-            <p class="visually-hidden" id="pet-weight-description">
-              Напишите здесь вес питомца в килограммах например:7.Обязательное
-              поле
-            </p>
-            <label for="pet-age" class="form__label">Возраст (лет):</label>
-            <input
-              type="text"
-              name="pet-age"
-              id="pet-age"
-              class="form__input form__input--text"
-              pattern="[0-9]{2}"
-              required
-              placeholder="7"
-              aria-describedby="pet-age-description"
-            />
-            <p class="visually-hidden" id="pet-age-description">
-              Напишите здесь возраст питомца например:7
-            </p>
+            <div class="form__input-group">
+              <label for="pet-name" class="form__label">Имя:<sup>*</sup></label>
+              <input
+                type="text"
+                name="pet-name"
+                id="pet-name"
+                class="form__input"
+                required
+                placeholder="Барсик"
+                aria-describedby="pet-name-descr"
+              />
+              <p class="visually-hidden" id="pet-name-descr">
+                Напишите здесь имя питомца например:Барсик.Обязательное поле
+              </p>
+            </div>
+            <div class="form__input-group">
+              <label for="pet-weight" class="form__label"
+                >Вес (кг):<sup>*</sup></label
+              >
+              <input
+                type="text"
+                name="pet-weight"
+                id="pet-weight"
+                class="form__input"
+                pattern="[0-9]{2}"
+                required
+                placeholder="7"
+                aria-describedby="pet-weight-description"
+              />
+              <p class="visually-hidden" id="pet-weight-description">
+                Напишите здесь вес питомца в килограммах например:7.Обязательное
+                поле
+              </p>
+            </div>
+            <div class="form__input-group">
+              <label for="pet-age" class="form__label">Возраст (лет):</label>
+              <input
+                type="text"
+                name="pet-age"
+                id="pet-age"
+                class="form__input form__input--text"
+                pattern="[0-9]{2}"
+                required
+                placeholder="7"
+                aria-describedby="pet-age-description"
+              />
+              <p class="visually-hidden" id="pet-age-description">
+                Напишите здесь возраст питомца например:7
+              </p>
+            </div>
           </fieldset>
-          <fieldset class="form__fieldset form__fieldset--w-list form__fieldset--row-w-40">
+          <fieldset
+            class="form__fieldset form__fieldset--w-list form__fieldset--row"
+          >
             <legend class="form__legend form__inner visually-hidden">
               Выбор программы
             </legend>
@@ -164,7 +171,7 @@
           </fieldset>
         </div>
         <div class="form__inner">
-          <fieldset class="form__fieldset form__fieldset--row">
+          <fieldset class="form__fieldset">
             <legend class="form__legend form__legend--w-70">
               Контактные данные (владельца кота)
             </legend>
