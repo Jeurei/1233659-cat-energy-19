@@ -18,7 +18,6 @@
 
 .progress__slides-list {
   display: flex;
-  transform: translateX(154px);
 }
 
 .progress__result {
@@ -27,6 +26,7 @@
   background-repeat: no-repeat;
 
   &--before {
+    position: absolute;
     width: 312px;
     height: 232px;
     background-image: url("../img/before-mobile@1x.png");
@@ -34,6 +34,7 @@
   }
 
   &--after {
+    opacity: 0;
     width: 311px;
     height: 232px;
     background-image: url("../img/after-mobile@1x.png");
