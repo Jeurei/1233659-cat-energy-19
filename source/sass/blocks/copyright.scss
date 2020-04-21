@@ -1,7 +1,9 @@
 .copyright {
-  padding-top: 15px;
   padding-bottom: 15px;
+  display: flex;
+  justify-content: flex-end;
   width: 100%;
+  padding-top: 16px;
 }
 
 .copyright__creator-logo {
@@ -10,7 +12,10 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  width: 100%;
+}
 
+.copyright__creator-logo[href] {
   &:hover {
     color: $green;
   }
@@ -27,7 +32,9 @@
   font-family: $alt-font;
   line-height: 16px;
   margin-right: auto;
+}
 
+.copyright__text[href] {
   &:hover {
     color: $color-text;
   }
@@ -37,13 +44,27 @@
   }
 }
 
+.copyright__icon {
+  margin-right: -8px;
+}
+
 @media (min-width: $tablet-width) {
   .copyright {
     width: 33%;
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 9px;
+  }
+
+  .copyright__creator-logo {
+    margin-right: -7px;
+    padding-top: 4px;
+    width: auto;
   }
 
   .copyright__text {
-    margin-right: 23px;
+    padding-top: 0;
+    margin-right: 14px;
     white-space: nowrap;
   }
 }

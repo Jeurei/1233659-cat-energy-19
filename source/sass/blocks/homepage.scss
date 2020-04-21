@@ -1,5 +1,5 @@
 .homepage {
-  background: linear-gradient(to bottom, $bg-green 305px, $white 305px);
+  background: linear-gradient(to bottom, $bg-green 304px, $white 304px);
   color: $alt-base-color;
   background-repeat: no-repeat;
   background-position: top;
@@ -9,7 +9,7 @@
 }
 
 .homepage__inner {
-  padding-top: 29px;
+  padding-top: 25px;
   padding-bottom: 22px;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@
   font-size: $title-h1-fs;
   line-height: 36px;
   color: $white;
-  padding-bottom: 19px;
+  padding-bottom: 25px;
 }
 
 .homepage__text {
@@ -36,20 +36,26 @@
   padding-bottom: 29px;
 }
 
+.homepage__button {
+  font-size: 14px;
+  margin-top: 3px;
+}
+
 @media (min-width: $tablet-width) {
   .homepage {
     background: none;
     background-color: $white;
     background-image: url("../img/index-can-tablet@1x.jpg");
     background-repeat: no-repeat;
-    background-position: bottom center;
-    min-height: 840px;
+    background-position: 50% 100%;
   }
 
   .homepage__inner {
     background-image: none;
     text-align: left;
-    padding-left: 90px;
+    padding-top: 56px;
+    padding-left: 118px;
+    min-height: 864px;
   }
 
   .homepage__title {
@@ -57,14 +63,14 @@
     width: 70%;
     line-height: $title-h1-lh;
     color: $base-color;
-    padding-bottom: 33px;
+    padding-bottom: 41px;
   }
 
   .homepage__text {
     color: $base-color;
     font-size: 20px;
     line-height: $secondary-lh;
-    padding-bottom: 48px;
+    padding-bottom: 45px;
   }
 
   .homepage__img {
@@ -74,23 +80,43 @@
   .homepage__button {
     width: 245px;
     height: 52px;
+    font-size: 20px;
+    line-height: $secondary-lh;
   }
 }
 
 @media (min-width: $desktop-width) {
   .homepage {
-    background-image: url("../img/index-can-desktop@1x.png"), url("../img/index-background-desktop@1x.jpg"), linear-gradient(to right, $white 50%, $bg-green 50%);
-    background-position: 60%, 100%, center;
-    background-size: 552px, 720px, 100%;
-    min-height: 696px;
     display: flex;
+    min-height: 582px;
+    padding-top: 0;
+    background-image: none;
+    background-color: transparent;
+  }
+
+  .homepage__inner {
+    background-image: url("../img/index-can-desktop@1x.png");
+    background-color: transparent;
+    background-position: 559px 27px;
+    background-size: 552px 499px;
+    background-repeat: no-repeat;
+    padding-left: 190px;
+    padding-top: 26px;
+    min-height: 582px;
   }
 
   .homepage__title {
-    font-size: $big-title-fs;
-    line-height: $title-h1-lh;
-    width: 40%;
-    padding-top: 113px;
-    padding-bottom: 33px;
+    padding-top: 80px;
+    padding-bottom: 43px;
+    padding-right: 30%;
+  }
+
+  .homepage__text {
+    padding-bottom: 50px;
+  }
+
+  .homepage__button {
+    width: 245px;
+    height: 52px;
   }
 }

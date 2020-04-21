@@ -1,7 +1,6 @@
 .program-list {
   font-size: $body-fs;
   line-height: 18px;
-  padding-bottom: 17.5px;
 }
 
 .program {
@@ -11,9 +10,9 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  padding-left: 19px;
-  padding-right: 36px;
-  padding-top: 24px;
+  padding-left: 16px;
+  padding-right: 25px;
+  padding-top: 29px;
   margin-bottom: 20px;
 }
 
@@ -26,6 +25,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  padding-bottom: 7px;
 
   &::before {
     position: absolute;
@@ -35,14 +35,14 @@
     height: 50px;
     background-color: $bg-green;
     border-radius: 50%;
-    top: -15%;
-    left: 0;
+    top: -11%;
+    left: 6px;
   }
 
   &::after {
     position: absolute;
-    top: -15%;
-    left: 0;
+    top: -18%;
+    left: 6px;
     content: "";
     display: block;
     width: 50px;
@@ -61,7 +61,8 @@
   background-image: url("../img/icon-cat-pro.svg");
   width: 67px;
   background-size: 67px 28px;
-  left: -8px;
+  left: -3px;
+  top: -6%;
 }
 
 .program__text {
@@ -73,19 +74,20 @@
 .program__link {
   position: relative;
   display: block;
-  padding-top: 18.5px;
+  padding-top: 17.5px;
   padding-bottom: 19.5px;
   border-top: 1px solid $border-color;
   text-transform: uppercase;
   font-size: $secondary-fs;
   line-height: 16px;
   width: 100%;
+  padding-left: 3px;
 
   &::after {
     content: "";
     position: absolute;
-    top: 20%;
-    left: 44%;
+    top: 37.5%;
+    left: 42%;
 
     @include box(25px, 12px);
     background-image: url("../img/icon-right-arrow-long.svg");
@@ -102,17 +104,22 @@
 
   .program {
     min-height: 372px;
-    padding-right: 44%;
+    padding-right: 282px;
+    padding-left: 49px;
+    padding-bottom: 36px;
+    margin-bottom: 29px;
   }
 
   .program--pro {
-    padding-right: 49%;
+    padding-right: 313px;
   }
 
   .program__title {
     font-size: $title-h1-fs;
     line-height: 37px;
     padding: 0;
+    padding-top: 36px;
+    padding-left: 4px;
 
     &::before {
       display: none;
@@ -125,6 +132,9 @@
 
   .program__text {
     position: relative;
+    padding-top: 0;
+    padding-bottom: 11px;
+    padding-left: 3px;
 
     &::after {
       position: absolute;
@@ -134,8 +144,8 @@
       display: block;
       background-color: $bg-green;
       border-radius: 50%;
-      top: -30%;
-      right: -65%;
+      top: -44%;
+      right: -59%;
     }
 
     &::before {
@@ -148,15 +158,15 @@
       background-position: center;
       background-size: 141px 196px;
       background-image: url("../img/icon-cat-slim.svg");
-      top: -30%;
-      right: -60%;
+      top: -57%;
+      right: -51%;
       z-index: 2;
     }
   }
 
   .program__text--pro {
     &::after {
-      right: -82%;
+      right: -74%;
     }
 
     &::before {
@@ -166,8 +176,8 @@
       background-position: center;
       background-size: 268px 113px;
       background-image: url("../img/icon-cat-pro.svg");
-      top: -5%;
-      right: -91%;
+      top: -3%;
+      right: -83%;
       z-index: 2;
     }
   }
@@ -175,6 +185,7 @@
   .program__link {
     font-size: 20px;
     line-height: 20px;
+    margin-bottom: -9px;
     border: none;
 
     &::after {
@@ -184,37 +195,37 @@
 }
 
 @media (min-width: $desktop-width) {
-  .program-list {
-    padding-top: 80px;
-  }
-
   .program-list__inner {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
+    padding-top: 80px;
   }
 
   .program {
     align-items: stretch;
-    width: 47%;
-    min-height: 372px;
-    padding-right: 5%;
+    width: 50%;
+    padding: 0;
+    padding-left: 52px;
+    padding-top: 41px;
 
-    &:--slim {
-      margin-right: auto;
+    &--slim {
+      margin-right: 80px;
     }
   }
 
   .program__title {
-    line-height: 37px;
-    padding-left: 33%;
+    padding: 0;
+    padding-left: 163px;
+    padding-top: 4px;
 
     &::before {
       display: block;
       width: 100px;
       height: 100px;
-      top: 0;
+      top: 4px;
+      left: 0;
     }
 
     &::after {
@@ -222,8 +233,8 @@
       width: 71px;
       height: 97px;
       background-size: 71px 97px;
-      left: 5%;
-      top: 0;
+      left: 14px;
+      top: -2px;
     }
   }
 
@@ -232,12 +243,16 @@
       width: 134px;
       height: 57px;
       background-size: 134px 57px;
-      top: 22%;
-      left: -4%;
+      top: 25px;
+      left: -17px;
     }
   }
 
   .program__text {
+    padding: 0;
+    padding-top: 44px;
+    padding-right: 30px;
+
     &::after {
       display: none;
     }
@@ -248,8 +263,13 @@
   }
 
   .program__link {
+    padding: 0;
+    margin-top: -25px;
+    width: auto;
+
     &::after {
-      left: 25%;
+      left: 125%;
+      top: 3px;
     }
   }
 }

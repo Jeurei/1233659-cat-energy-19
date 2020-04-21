@@ -3,12 +3,50 @@
   color: $base-color;
   font-size: 20px;
   line-height: $secondary-lh;
+
+  .nav-list {
+    display: none;
+  }
+
+  .main-nav__toggle {
+    display: block;
+  }
+
+  .nav-list--active {
+    border-top: 1px solid $border-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.header--nojs {
+  .nav-list {
+    display: flex;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
 }
 
 .header__link {
   padding-bottom: 15px;
   padding-top: 11px;
+  display: block;
+  width: 191px;
+  height: 39px;
+  background-image: url("../img/logo-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 191px 39px;
+  margin-bottom: 16px;
+  margin-left: 19px;
+}
 
+.header__link[href] {
   &:hover {
     opacity: 0.8;
   }
@@ -22,6 +60,24 @@
   .header {
     font-size: 18px;
     line-height: 25px;
+
+    .main-nav__toggle {
+      display: none;
+    }
+
+    .nav-list {
+      display: flex;
+    }
+  }
+
+  .header__link {
+    background-image: url("../img/logo-tablet.svg");
+    width: 174px;
+    height: 59px;
+    background-size: 174px 59px;
+    margin-right: auto;
+    margin-left: 29px;
+    margin-bottom: 0;
   }
 }
 
@@ -37,27 +93,18 @@
 
   .header__link {
     margin-right: auto;
+    margin-bottom: 0;
+    background-image: url("../img/logo-desktop.svg");
+    width: 203px;
+    height: 60px;
+    background-size: 203px 60px;
+    margin-left: 110px;
   }
 
   .header--index {
     font-size: $title-h3-fs;
     line-height: $title-h3-lh;
+    // котик то едет,
     background: linear-gradient(to right, $white 50%, $bg-green 50%);
-    // котик скрывается под градиентами не понимаю как его сделать видимым
-    &::after {
-      content: "";
-      display: block;
-      width: 50%;
-      min-height: 696px;
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      right: 0;
-      background-image: url("../img/index-background-desktop@1x.jpg");
-      background-color: $bg-green;
-      background-position: 0%;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
   }
 }

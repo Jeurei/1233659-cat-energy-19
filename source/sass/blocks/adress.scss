@@ -9,35 +9,48 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 15px;
-  padding-bottom: 13px;
+  padding-bottom: 26px;
+  padding-top: 39px;
 }
 
 .adress__title {
   font-size: $secondary-fs;
   line-height: $secondary-lh;
-  margin-right: 19px;
+  margin-right: 15px;
   text-transform: uppercase;
 }
 
 .adress__map {
-  @include box(100%, 320px);
+  @include box(100%, 363px);
 }
 
 @media (min-width: $tablet-width) {
   .adress {
     font-size: $secondary-fs;
-    padding-top: 34px;
+  }
+
+  .adress__inner {
+    padding-left: 69px;
+    padding-right: 72px;
+    padding-top: 39px;
   }
 
   .adress__title {
     font-size: $title-h3-fs;
     line-height: $title-h3-lh;
     width: 20%;
+    padding-top: 7px;
   }
 
   .adress__text {
-    width: 20%;
+    width: 30%;
+    padding-top: 7px;
+    text-align: right;
+  }
+
+  .adress__city {
+    display: block;
+    padding-top: 20px;
   }
 
   .adress__map {
@@ -53,20 +66,20 @@
   }
 
   .adress__inner {
-    width: 570px;
+    width: 571px;
     position: absolute;
     z-index: 2;
-    min-height: 201px;
     background-color: $white;
-    top: 20%;
-    left: 10%;
-    padding-top: 69px;
-    padding-bottom: 62px;
+    top: 85px;
+    left: 230px;
+    padding-top: 52px;
+    padding-bottom: 58px;
     padding-left: 76px;
-    padding-right: 90px;
   }
 
   .adress__text {
-    width: 31%;
+    width: 100%;
+    text-align: left;
+    padding-left: 150px;
   }
 }
