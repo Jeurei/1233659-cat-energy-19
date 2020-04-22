@@ -23,7 +23,7 @@
   background-position: top;
 
   @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-    background-image: url("../../img/index-background-mobile@2x.jpg");
+    background-image: url("varimg/index-background-mobile@2x.jpg");
     // я немного не понял нужно,ли что то делать с background-size увеличивать на два или просто прописывать или вообще 2x картинка значит там всё как надо
     background-size: 320px 305px;
   }
