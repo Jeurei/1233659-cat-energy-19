@@ -124,7 +124,7 @@
   text-transform: uppercase;
   height: 45px;
   padding-left: 15px;
-  width: 60%;
+  width: auto;
   font-size: inherit;
   line-height: inherit;
   font-family: inherit;
@@ -228,7 +228,6 @@
 
   .form__input {
     padding-left: 16px;
-    min-width: auto;
     margin-top: 15px;
   }
 }

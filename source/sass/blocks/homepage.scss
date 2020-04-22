@@ -18,9 +18,17 @@
   text-align: center;
   background-color: transparent;
   background-image: url("../img/index-background-mobile@1x.jpg");
+  background-size: 320px 305px;
   background-repeat: no-repeat;
   background-position: top;
+
+  @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+    background-image: url("../../img/index-background-mobile@2x.jpg");
+    // я немного не понял нужно,ли что то делать с background-size увеличивать на два или просто прописывать или вообще 2x картинка значит там всё как надо
+    background-size: 320px 305px;
+  }
 }
+
 
 .homepage__title {
   font-size: $title-h1-fs;
@@ -46,8 +54,13 @@
     background: none;
     background-color: $white;
     background-image: url("../img/index-can-tablet@1x.jpg");
+    background-size: 709px 609px;
     background-repeat: no-repeat;
     background-position: 50% 100%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-can-tablet@2x.jpg");
+    }
   }
 
   .homepage__inner {
@@ -103,6 +116,10 @@
     padding-left: 190px;
     padding-top: 26px;
     min-height: 582px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-can-desktop@2x.png");
+    }
   }
 
   .homepage__title {

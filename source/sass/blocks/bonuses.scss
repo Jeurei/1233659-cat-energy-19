@@ -13,6 +13,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
 }
 
 .bonuses__text {
@@ -32,8 +36,12 @@
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     background-size: 708px 200px;
     min-height: 200px;
-    margin-top: 71px;
+    margin-top: 67px;
     flex-direction: row;
+
+    @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   .bonuses__icon {
@@ -62,6 +70,10 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
   }
 
   .bonuses__icon {
