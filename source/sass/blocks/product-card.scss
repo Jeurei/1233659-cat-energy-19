@@ -1,12 +1,21 @@
 .product-card {
   border-top: 1px solid $border-color;
-  padding-bottom: 24px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 20px;
+  padding-top: 43px;
+
+  &:first-of-type {
+    padding-top: 22px;
+  }
+
+  &:nth-child(even) {
+    .product-card__descr-block {
+      padding-top: 1px;
+    }
+  }
 }
 // блоки едут не придумал как поправить,ещё при увеличении уменьшении масштаба браузера они тоже съезжают
 .product-card__descr-block {
@@ -16,6 +25,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 23px;
+  margin-left: -2px;
 }
 
 .product-card__link {
@@ -41,6 +51,7 @@
 .product-description__tr {
   display: flex;
   justify-content: space-between;
+  margin-top: -2px;
 }
 
 .product-description__td {
@@ -55,9 +66,14 @@
     background-color: $alt-bg-color;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 140px;
     min-height: 431px;
+    padding-top: 0;
+  }
+
+  .product-card:first-of-type {
+    padding-top: 0;
   }
 
   .product-card:nth-last-of-type(2) {
@@ -68,9 +84,10 @@
     text-align: center;
     font-size: $title-h3-fs;
     line-height: 20px;
-    padding-right: 25%;
-    padding-left: 25%;
-    padding-bottom: 25px;
+    width: 55%;
+    padding: 0;
+    margin: 0 auto;
+    padding-bottom: 28px;
   }
 
   .product-card__descr-block {
@@ -80,8 +97,19 @@
     margin-bottom: 28px;
   }
 
+  .product-card:nth-of-type(even) {
+    .product-card__descr-block {
+      padding-left: 32px;
+      padding-right: 34px;
+    }
+
+    .product-card__order-button {
+      margin-left: -4px;
+    }
+  }
+
   .product-card__link {
-    margin-bottom: 107px;
+    margin-bottom: 147px;
     width: 100%;
   }
 
@@ -94,12 +122,17 @@
     display: flex;
     width: 100%;
     border-bottom: 1px solid $border-color;
-    padding-bottom: 13px;
+    margin-top: 0;
+    margin-bottom: 13px;
   }
 
 
-  .product-description__td:first-child {
-    margin-right: auto;
+  .product-description__td {
+    width: 50%;
+  }
+
+  .product-description__td:last-child {
+    text-align: right;
   }
 
   .product-card__order-button {
@@ -116,20 +149,29 @@
     justify-content: center;
   }
 
+  .product-card:nth-of-type(even) {
+    padding-left: 0;
+
+    .product-card__descr-block {
+      padding-left: 39px;
+      padding-right: 24px;
+    }
+  }
+
   .product-card__link {
-    margin-bottom: 119px;
+    margin-bottom: 113px;
   }
 
   .product-card__title {
     padding: 0;
-    padding-left: 19px;
-    padding-right: 25px;
+    width: 75%;
     padding-bottom: 26px;
     text-align: center;
   }
 
   .product-card__order-button {
     width: 169px;
+    margin-left: 0;
   }
 
 

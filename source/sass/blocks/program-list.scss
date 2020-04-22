@@ -35,8 +35,8 @@
     height: 50px;
     background-color: $bg-green;
     border-radius: 50%;
-    top: -11%;
-    left: 6px;
+    top: -9%;
+    left: 7px;
   }
 
   &::after {
@@ -69,6 +69,7 @@
   padding-top: 24px;
   padding-bottom: 23px;
   width: 100%;
+  padding-left: 5px;
 }
 
 .program__link {

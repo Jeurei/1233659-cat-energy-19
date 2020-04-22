@@ -16,7 +16,7 @@
 .explanation__title {
   font-size: $title-h1-fs;
   line-height: $title-h1-lh;
-  padding-bottom: 25.5px;
+  padding-bottom: 30.5px;
 }
 
 .explanation__list {
@@ -39,7 +39,7 @@
     background-position: center;
     background-repeat: no-repeat;
     flex-shrink: 0;
-    margin-right: 15px;
+    margin-right: 20px;
     margin-bottom: 20px;
   }
 }
@@ -177,6 +177,7 @@
 
   .explanation__title {
     padding-bottom: 73px;
+    padding-top: 3px;
   }
 
   .explanation-list__item {
@@ -214,6 +215,12 @@
 
   .explanation-list__item:first-of-type {
     padding-left: 0;
+
+    .explanation-list__text {
+      &::after {
+        left: 49%;
+      }
+    }
   }
 
   .explanation-list__item:last-of-type {
@@ -235,7 +242,7 @@
     }
 
     &::after {
-      top: 50%;
+      top: 54%;
       left: 48%;
     }
   }

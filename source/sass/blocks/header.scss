@@ -85,6 +85,8 @@
   .header {
     background: none;
     background-color: $white;
+    font-size: $title-h3-fs;
+    line-height: $title-h3-lh;
 
     &::after {
       display: none;

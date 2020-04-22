@@ -11,12 +11,13 @@
   align-items: center;
   padding-bottom: 26px;
   padding-top: 39px;
+  padding-left: 20px;
 }
 
 .adress__title {
   font-size: $secondary-fs;
   line-height: $secondary-lh;
-  margin-right: 15px;
+  margin-right: 18px;
   text-transform: uppercase;
 }
 
@@ -30,9 +31,9 @@
   }
 
   .adress__inner {
-    padding-left: 69px;
+    padding-left: 71px;
     padding-right: 72px;
-    padding-top: 39px;
+    padding-top: 41px;
   }
 
   .adress__title {
@@ -70,8 +71,8 @@
     position: absolute;
     z-index: 2;
     background-color: $white;
-    top: 85px;
-    left: 230px;
+    top: 22%;
+    left: 194px;
     padding-top: 52px;
     padding-bottom: 58px;
     padding-left: 76px;

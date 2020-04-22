@@ -1,5 +1,5 @@
 .bonuses {
-  margin-top: 42px;
+  margin-top: 40px;
   font-size: $secondary-fs;
   line-height: $secondary-lh;
   background-color: $bg-green;
@@ -16,10 +16,14 @@
 }
 
 .bonuses__text {
-  padding-top: 64px;
+  padding-top: 57px;
   width: 60%;
   text-align: center;
   color: $white;
+}
+
+.bonuses__icon {
+  padding-top: 21px;
 }
 
 @media (min-width: $tablet-width) {
@@ -28,11 +32,12 @@
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     background-size: 708px 200px;
     min-height: 200px;
-    margin-top: 68px;
+    margin-top: 71px;
     flex-direction: row;
   }
 
   .bonuses__icon {
+    padding-top: 0;
     width: 50%;
     padding-left: 91px;
   }
