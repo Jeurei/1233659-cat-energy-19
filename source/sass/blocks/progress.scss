@@ -31,6 +31,10 @@
     height: 232px;
     background-image: url("../img/before-mobile@1x.png");
     background-size: 312px 232px;
+
+    @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+      background-image: url("../img/before-mobile@2x.png");
+    }
   }
 
   &--after {
@@ -39,6 +43,10 @@
     height: 232px;
     background-image: url("../img/after-mobile@1x.png");
     background-size: 311px 232px;
+
+    @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+      background-image: url("../img/after-mobile@2x.png");
+    }
   }
 }
 
@@ -111,17 +119,25 @@
     background-position: 0 0;
 
     &--before {
-      background-image: url("../img/before-tablet@1x.png"), linear-gradient(to bottom, $white 29.4%, $alt-bg-color 29.4%);
+      background-image: url("../img/before-tablet@1x.png"), linear-gradient(to bottom, $white 26.7%, $alt-bg-color 26.7%);
       background-size: 636px 517px, 100% 100%;
       z-index: 2;
       width: 45%;
       opacity: 1;
+
+      @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+        background-image: url("../img/before-tablet@2x.png"), linear-gradient(to bottom, $white 26.7%, $alt-bg-color 26.7%);
+      }
     }
 
     &--after {
       background-image: url("../img/after-tablet@1x.png");
       background-size: 636px 517px;
       opacity: 1;
+
+      @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+        background-image: url("../img/after-tablet@2x.png"), linear-gradient(to bottom, $white 26.7%, $alt-bg-color 26.7%);
+      }
     }
   }
 
@@ -251,12 +267,20 @@
       width: 50%;
       background-color: $bg-color;
       background-position: -9px 0, center;
+
+      @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+        background-image: url("../img/before-desktop@2x.png"), linear-gradient(to bottom, $white 33.2%, $alt-bg-color 33.2%);
+      }
     }
 
     &--after {
       background-image: url("../img/after-desktop@1x.png");
       background-size: 642px 517px;
       height: 517px;
+
+      @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+        background-image: url("../img/after-desktop@2x.png");
+      }
     }
   }
 

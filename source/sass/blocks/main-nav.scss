@@ -107,6 +107,10 @@
     background-size: 720px 696px;
     background-repeat: no-repeat;
     background-position: 100% 0;
+
+    @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 
   .nav-list {
