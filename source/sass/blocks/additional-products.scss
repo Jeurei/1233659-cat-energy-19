@@ -103,10 +103,12 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     padding-left: 38px;
-    padding-top: 15px;
+    padding-top: 25px;
+    padding-bottom: 19px;
 
     &:first-of-type {
       padding-top: 22px;
+      padding-bottom: 16px;
     }
   }
 
@@ -186,7 +188,7 @@
     flex-wrap: wrap;
     margin-top: -140px;
     justify-content: flex-start;
-    margin-bottom: 96px;
+    margin-bottom: 99px;
   }
 
   .additional-product-card {
@@ -200,6 +202,7 @@
 
   .additional-product-card:first-of-type {
     padding-top: 4px;
+    padding-bottom: 4px;
   }
 
   .additional-products__title {

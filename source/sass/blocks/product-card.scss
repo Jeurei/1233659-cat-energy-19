@@ -22,7 +22,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 23px;
+  margin-bottom: 22px;
   margin-left: -2px;
   padding-top: 22px;
 }
@@ -120,6 +120,7 @@
   .product-card__link {
     margin-bottom: 33px;
     margin-top: -44px;
+    margin-left: 4px;
     width: 100%;
   }
 
@@ -181,6 +182,7 @@
 
   .product-card__link {
     margin-bottom: 38px;
+    margin-left: 0;
   }
 
   .product-card__title {
