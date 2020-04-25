@@ -28,6 +28,7 @@
 
 .bonuses__icon {
   padding-top: 21px;
+  color: $white;
 }
 
 @media (min-width: $tablet-width) {
@@ -36,7 +37,7 @@
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     background-size: 708px 200px;
     min-height: 200px;
-    margin-top: 69px;
+    margin-top: 66px;
     flex-direction: row;
 
     @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {

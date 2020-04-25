@@ -54,7 +54,7 @@
     padding-left: 0;
     padding-top: 0;
     padding-right: 9px;
-    padding-bottom: 6px;
+    padding-bottom: 15px;
   }
 
   .copyright__creator-logo {
@@ -70,8 +70,12 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .copyright {
-    padding-bottom: 12px;
+    padding-bottom: 18px;
+  }
+
+  .copyright__text {
+    margin-top: 9px;
   }
 }
