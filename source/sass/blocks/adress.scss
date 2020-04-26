@@ -4,14 +4,14 @@
   background-color: $alt-bg-color;
 }
 
-.adress__inner {
+.adress__block {
+
+  padding-bottom: 26px;
+  padding-top: 37px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 26px;
-  padding-top: 38px;
-  padding-left: 20px;
 }
 
 .adress__title {
@@ -30,11 +30,12 @@
     font-size: $secondary-fs;
   }
 
-  .adress__inner {
-    padding-left: 71px;
-    padding-right: 72px;
+  .adress__block {
+    padding-left: 42px;
+    padding-right: 42px;
     padding-top: 41px;
   }
+
 
   .adress__title {
     font-size: $title-h3-fs;
@@ -67,12 +68,16 @@
   }
 
   .adress__inner {
+    position: relative;
+  }
+
+  .adress__block {
     width: 571px;
     position: absolute;
     z-index: 2;
     background-color: $white;
-    top: 22%;
-    left: 194px;
+    top: 87px;
+    left: 109px;
     padding-top: 52px;
     padding-bottom: 58px;
     padding-left: 76px;
@@ -81,6 +86,6 @@
   .adress__text {
     width: 100%;
     text-align: left;
-    padding-left: 150px;
+    padding-left: 143px;
   }
 }
