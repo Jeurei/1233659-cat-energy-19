@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Каталог магазина Cat Energy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <script src="./picturefill.js"></script>
+    <script src="./js/svg4everybody.min.js"></script>
   </head>
   <body>
     <header class="header header--nojs">
@@ -768,7 +770,7 @@
             <h2 class="bonuses__title visually-hidden">Блок акций</h2>
             <div class="bonuses__icon">
               <svg width="56" height="61" fill="currentColor">
-                <use xlink:href="./img/sprite.svg#bonuses__icon"></use>
+                <use xlink:href="./img/sprite.svg#icon-gift"></use>
               </svg>
             </div>
             <p class="text bonuses__text">
@@ -800,9 +802,7 @@
           class="footer__logo-link"
           aria-label="Ссылка на главную"
         >
-          <svg width="128" height="24">
-            <use xlink:href="./img/sprite.svg#footer__logo"></use>
-          </svg>
+          <img src="./img/logo-footer.svg" width="128" height="24" alt="catenergy logo">
         </a>
         <ul class="list footer__socials socials-list">
           <li class="socials-list__item">
@@ -812,7 +812,7 @@
               aria-label="Ссылка на нашу страницу во Вконтакте"
             >
               <svg width="30" height="16" fill="currentColor">
-                <use xlink:href="./img/sprite.svg#social-link--vk"></use>
+                <use xlink:href="./img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
@@ -823,7 +823,7 @@
               aria-label="Ссылка на нашу страницу в Instagram"
             >
               <svg width="23" height="23" fill="currentColor">
-                <use xlink:href="./img/sprite.svg#social-link--insta"></use>
+                <use xlink:href="./img/sprite.svg#icon-insta"></use>
               </svg>
             </a>
           </li>
@@ -833,7 +833,7 @@
               class="socials-list__link social-link social-link--fb"
               aria-label="Ссылка на нашу страницу в Facebook"
               ><svg width="14" height="28" fill="currentColor">
-                <use xlink:href="./img/sprite.svg#social-link--fb"></use>
+                <use xlink:href="./img/sprite.svg#icon-fb"></use>
               </svg>
             </a>
           </li>
@@ -845,16 +845,19 @@
             aria-label="Ссылка на сайт разработчика сайта на котором вы находитесь"
           >
             <p class="copyright__text">HTML Academy</p>
-            <svg width="40" height="40" class="copyright__icon" fill="currentColor">
-              <use xlink:href="./img/sprite.svg#copyright__logo"></use>
+            <svg
+              width="40"
+              height="40"
+              class="copyright__icon"
+              fill="currentColor"
+            >
+              <use xlink:href="./img/logo-footer.svg"></use>
             </svg>
           </a>
         </div>
       </div>
     </footer>
     <script src="./js/app.js"></script>
-    <script src="./picturefill.js"></script>
-    <script src="./js/svg4everybody.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=6deaa343-00b8-4c42-b56f-c894454a66d9&lang=ru_RU&onload=initMap"></script>
   </body>
 </html>
