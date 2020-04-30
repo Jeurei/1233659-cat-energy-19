@@ -14,6 +14,7 @@
   position: relative;
   padding-bottom: 21px;
   padding-top: 7px;
+  width: 100%;
 }
 
 .progress__slides-list {
@@ -27,7 +28,7 @@
 
   &--before {
     position: absolute;
-    width: 312px;
+    width: 100%;
     height: 232px;
     background-image: url("../img/before-mobile@1x.png");
     background-size: 312px 232px;
@@ -39,7 +40,7 @@
 
   &--after {
     opacity: 0;
-    width: 311px;
+    width: 100%;
     height: 232px;
     background-image: url("../img/after-mobile@1x.png");
     background-size: 311px 232px;
@@ -240,6 +241,10 @@
   .progress__slider-thumb {
     display: none;
   }
+
+  .progress__slider-button:hover {
+    border-bottom: none;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -291,5 +296,6 @@
 
   .progress__slider-button:last-of-type {
     padding-right: 0;
+    padding-left: 32px;
   }
 }
