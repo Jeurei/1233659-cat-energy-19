@@ -14,4 +14,13 @@
   text-transform: uppercase;
   font-size: $secondary-fs;
   line-height: $secondary-lh;
+  cursor: pointer;
+
+  &:hover {
+    background: $bg-green;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }

@@ -14,6 +14,7 @@
   position: relative;
   padding-bottom: 21px;
   padding-top: 7px;
+  width: 100%;
 }
 
 .progress__slides-list {
@@ -24,10 +25,12 @@
   flex-shrink: 0;
   background-position: 0 -8px;
   background-repeat: no-repeat;
+  left: -16px;
+  top: 10px;
 
   &--before {
     position: absolute;
-    width: 312px;
+    width: 100%;
     height: 232px;
     background-image: url("../img/before-mobile@1x.png");
     background-size: 312px 232px;
@@ -39,7 +42,7 @@
 
   &--after {
     opacity: 0;
-    width: 311px;
+    width: 100%;
     height: 232px;
     background-image: url("../img/after-mobile@1x.png");
     background-size: 311px 232px;
@@ -61,6 +64,8 @@
   align-items: center;
   padding-top: 8.5px;
   padding-bottom: 18px;
+  padding-left: 10px;
+  padding-right: 5px;
 }
 
 .progress__slider-button {
@@ -68,14 +73,16 @@
   border: none;
   text-transform: uppercase;
   font-family: inherit;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
   font-size: inherit;
-  padding-left: 10px;
-  padding-right: 5px;
 }
 
 .progress__slider-button:hover {
   border-bottom: 1px solid $color-text;
+}
+
+.progress__slider-button:active {
+  border-bottom: none;
 }
 
 .progress__slider-line {
@@ -119,14 +126,14 @@
     background-position: 0 0;
 
     &--before {
-      background-image: url("../img/before-tablet@1x.png"), linear-gradient(to bottom, $white 26.7%, $alt-bg-color 26.7%);
+      background-image: url("../img/before-tablet@1x.png"), linear-gradient(to bottom, $white 33.9%, $alt-bg-color 33.9%);
       background-size: 636px 517px, 100% 100%;
       z-index: 2;
       width: 45%;
       opacity: 1;
 
       @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-        background-image: url("../img/before-tablet@2x.png"), linear-gradient(to bottom, $white 26.7%, $alt-bg-color 26.7%);
+        background-image: url("../img/before-tablet@2x.png"), linear-gradient(to bottom, $white 33.9%, $alt-bg-color 33.9%);
       }
     }
 
@@ -136,7 +143,7 @@
       opacity: 1;
 
       @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-        background-image: url("../img/after-tablet@2x.png"), linear-gradient(to bottom, $white 26.7%, $alt-bg-color 26.7%);
+        background-image: url("../img/after-tablet@2x.png");
       }
     }
   }
@@ -145,6 +152,8 @@
     width: 100%;
     justify-content: flex-start;
     padding-top: 21px;
+    padding-left: 61px;
+    padding-right: 62px;
   }
 
   .progress__input {
@@ -159,9 +168,17 @@
       width: 34px;
       height: 34px;
       border-radius: 50%;
-      box-shadow: $checkable-inputs-bs;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
       background-color: $bg-green;
       margin-top: -13px;
+
+      &:hover {
+        box-shadow: $checkable-inputs-bs;
+      }
+
+      &:active {
+        box-shadow: 0 0 0 2px $green;
+      }
     }
 
     &::-webkit-slider-runnable-track {
@@ -176,8 +193,16 @@
       width: 10.5px;
       height: 10.5px;
       border-radius: 50%;
-      box-shadow: $checkable-inputs-bs;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
       background-color: $bg-green;
+
+      &:hover {
+        box-shadow: $checkable-inputs-bs;
+      }
+
+      &:active {
+        box-shadow: 0 0 0 2px $green;
+      }
     }
 
     &::-moz-range-track {
@@ -211,8 +236,16 @@
       width: 10.5px;
       height: 10.5px;
       border-radius: 50%;
-      box-shadow: $checkable-inputs-bs;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
       background-color: $bg-green;
+
+      &:hover {
+        box-shadow: $checkable-inputs-bs;
+      }
+
+      &:active {
+        box-shadow: 0 0 0 2px $green;
+      }
     }
 
     &::-ms-fill-lower {
@@ -225,12 +258,7 @@
   }
 
   .progress__slider-button:first-of-type {
-    padding-left: 66px;
     margin-right: 17px;
-  }
-
-  .progress__slider-button:last-of-type {
-    padding-right: 70px;
   }
 
   .progress__slider-line {
@@ -246,7 +274,6 @@
   .progress {
     width: 50%;
     padding-top: 0;
-    // не придумал как маринами/паддингами спозиционировать,вообще мне кажется,что в целом у меня с десктопной версиией что то не так шрифты не сходятся с макетом и пиксельперфектом размеры тоже маргины большие и паддинги лучше дождусь коментария
     margin-top: -124px;
   }
 
@@ -284,12 +311,16 @@
     }
   }
 
+  .progress__slider-controls {
+    padding-left: 30px;
+    padding-right: 0;
+  }
+
   .progress__slider-button:first-of-type {
     margin-right: 19px;
-    padding-left: 39px;
   }
 
   .progress__slider-button:last-of-type {
-    padding-right: 0;
+    margin-right: -6px;
   }
 }

@@ -25,6 +25,11 @@
 .header--nojs {
   .nav-list {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $border-color;
+    width: 100%;
   }
 
   .main-nav__toggle {
@@ -47,6 +52,8 @@
 }
 
 .header__link[href] {
+  cursor: pointer;
+
   &:hover {
     opacity: 0.8;
   }
@@ -106,7 +113,6 @@
   .header--index {
     font-size: $title-h3-fs;
     line-height: $title-h3-lh;
-    // котик то едет,
     background: linear-gradient(to right, $white 50%, $bg-green 50%);
   }
 }

@@ -15,7 +15,7 @@
     padding-top: 0;
   }
 }
-// блоки едут не придумал как поправить,ещё при увеличении уменьшении масштаба браузера они тоже съезжают
+
 .product-card__descr-block {
   width: 50%;
   display: flex;
@@ -30,7 +30,6 @@
 .product-card__link {
   width: 50%;
 }
-
 
 .product-card__title {
   text-transform: uppercase;
@@ -93,7 +92,7 @@
     width: 100%;
     padding-left: 37px;
     padding-right: 28px;
-    margin-bottom: 26px;
+    margin-bottom: 24px;
     padding-top: 0;
   }
 
@@ -103,7 +102,7 @@
     .product-card__descr-block {
       padding-left: 32px;
       padding-right: 34px;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
 
     .product-card__link {
@@ -137,7 +136,6 @@
     margin-bottom: 13px;
   }
 
-
   .product-description__td {
     width: 50%;
   }
@@ -158,6 +156,11 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin-bottom: 143px;
+  }
+
+  .product-card__descr-block {
+    margin-bottom: 26px;
   }
 
   .product-card:nth-of-type(even) {
@@ -188,7 +191,8 @@
   .product-card__title {
     padding: 0;
     width: 75%;
-    padding-bottom: 23px;
+    padding-top: 1px;
+    padding-bottom: 25px;
     text-align: center;
   }
 
@@ -200,7 +204,6 @@
     width: 169px;
     margin-left: 0;
   }
-
 
   .product-description__td {
     width: 50%;

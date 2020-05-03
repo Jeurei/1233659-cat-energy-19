@@ -16,6 +16,15 @@
   margin-bottom: 20px;
 }
 
+.program--slim {
+  padding-top: 27px;
+  padding-bottom: 3px;
+}
+
+.program--pro {
+  padding-top: 27px;
+}
+
 .program__title {
   font-size: $title-h2-fs;
   line-height: 37px;
@@ -97,6 +106,21 @@
   }
 }
 
+.program__link:hover {
+  &::after {
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    width: 34px;
+  }
+}
+
+.program__link:active {
+  opacity: 0.3;
+
+  &::after {
+    opacity: 0.3;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .program-list {
     font-size: $secondary-fs;
@@ -119,8 +143,12 @@
     font-size: $title-h1-fs;
     line-height: 37px;
     padding: 0;
-    padding-top: 36px;
+    padding-top: 42px;
     padding-left: 4px;
+
+    &--pro {
+      padding-top: 34px;
+    }
 
     &::before {
       display: none;

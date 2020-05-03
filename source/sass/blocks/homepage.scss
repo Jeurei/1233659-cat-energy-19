@@ -1,9 +1,18 @@
 .homepage {
-  background: linear-gradient(to bottom, $bg-green 304px, $white 304px);
+  &::before {
+    content: "";
+    width: 1000vw;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(to bottom, $bg-green 305px, $white 305px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    z-index: 0;
+    left: -30vw;
+  }
   color: $alt-base-color;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: 100% 305px;
+  position: relative;
   font-size: $body-fs;
   line-height: 14px;
 }
@@ -21,10 +30,10 @@
   background-size: 320px 305px;
   background-repeat: no-repeat;
   background-position: top;
+  position: relative;
 
   @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
     background-image: url("../img/index-background-mobile@2x.jpg");
-    // я немного не понял нужно,ли что то делать с background-size увеличивать на два или просто прописывать или вообще 2x картинка значит там всё как надо
     background-size: 320px 305px;
   }
 }
@@ -51,6 +60,9 @@
 
 @media (min-width: $tablet-width) {
   .homepage {
+    &::before {
+      display: none;
+    }
     background: none;
     background-color: $white;
     background-image: url("../img/index-can-tablet@1x.jpg");

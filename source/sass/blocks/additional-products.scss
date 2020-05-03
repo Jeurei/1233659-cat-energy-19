@@ -40,6 +40,7 @@
   flex-wrap: wrap;
 }
 
+
 .additional-product-card {
 
   display: flex;
@@ -47,7 +48,8 @@
   justify-content: center;
   align-items: center;
   border-top: 1px solid $border-color;
-  padding-bottom: 28px;
+  padding-bottom: 14px;
+  padding-top: 14px;
 
   &:first-of-type {
     padding-top: 12px;
@@ -94,6 +96,7 @@
 @media (min-width: $tablet-width) {
   .additional-products {
     margin-bottom: 90px;
+    border: none;
   }
 
   .additional-product-card {
@@ -188,7 +191,8 @@
     flex-wrap: wrap;
     margin-top: -140px;
     justify-content: flex-start;
-    margin-bottom: 99px;
+    margin-bottom: 102px;
+    padding-top: 20px;
   }
 
   .additional-product-card {
