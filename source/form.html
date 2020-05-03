@@ -44,7 +44,7 @@
               >Каталог продукции</a
             >
           </li>
-          <li class="nav-list__item">
+          <li class="nav-list__item nav-list__item--active">
             <a
               class="nav-list__link nav-list__link--active"
               aria-label="Ссылка на страницу с формой подбора программы,но так как вы уже на ней она отключена"
@@ -92,7 +92,6 @@
                 name="pet-weight"
                 id="pet-weight"
                 class="form__input"
-                pattern="[0-9]{2}"
                 required
                 placeholder="7"
                 aria-describedby="pet-weight-description"
@@ -109,7 +108,6 @@
                 name="pet-age"
                 id="pet-age"
                 class="form__input form__input--text"
-                pattern="[0-9]{2}"
                 required
                 placeholder="7"
                 aria-describedby="pet-age-description"
@@ -236,12 +234,13 @@
 
         <div class="form__inner">
           <fieldset class="form__fieldset">
-            <legend class="form__legend">Комментарий</legend>
+            <legend class="form__legend" id="textarea__label">Комментарий</legend>
             <textarea
               name="textarea"
               class="form__textarea"
               placeholder="Расскажите обо всех повадках кота"
               aria-describedby="textarea-description"
+              aria-labelledby="textarea__label"
             ></textarea>
             <p id="textarea-description" class="visually-hidden">
               Расскажите обо всех повадках кота
@@ -388,7 +387,7 @@
         </ul>
         <div class="footer__copyright copyright">
           <a
-            href="#"
+            href="https://htmlacademy.ru/intensive/adaptive"
             class="copyright__creator-logo"
             aria-label="Ссылка на сайт разработчика сайта на котором вы находитесь"
           >

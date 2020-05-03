@@ -31,6 +31,8 @@
 }
 
 .social-link[href] {
+  cursor: pointer;
+
   &:hover {
     color: $green;
   }

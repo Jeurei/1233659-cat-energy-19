@@ -16,6 +16,8 @@
 }
 
 .copyright__creator-logo[href] {
+  cursor: pointer;
+
   &:hover {
     color: $green;
   }
@@ -35,6 +37,8 @@
 }
 
 .copyright__text[href] {
+  cursor: pointer;
+
   &:hover {
     color: $color-text;
   }

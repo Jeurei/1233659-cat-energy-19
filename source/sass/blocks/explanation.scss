@@ -26,6 +26,10 @@
   align-items: stretch;
 }
 
+.explanation__list-item:first-of-type {
+  padding-top: 3px;
+}
+
 .explanation-list__text {
   display: flex;
   flex-direction: row;
@@ -105,6 +109,10 @@
   .explanation__list {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .explanation__list-item:first-of-type {
+    padding-top: 0;
   }
 
   .explanation-list__item {

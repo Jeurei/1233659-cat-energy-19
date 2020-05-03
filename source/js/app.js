@@ -24,7 +24,12 @@ function initMap(ymaps) {
   myMap.controls.remove("rulerControl");
   myMap.geoObjects.add(myPlacemark);
 }
+
+var before = document.querySelector(".progress__result--before");
+var after = document.querySelector(".progress__result--after");
+var thumb = document.querySelector(".progress__slider-thumb");
 document.querySelector(".header").classList.remove("header--nojs");
+
 document
   .querySelector(".main-nav__toggle")
   .addEventListener("click", function () {
@@ -33,9 +38,6 @@ document
     button.classList.toggle("main-nav__toggle--close");
     nav.classList.toggle("nav-list--active");
   });
-var before = document.querySelector(".progress__result--before");
-var after = document.querySelector(".progress__result--after");
-var thumb = document.querySelector(".progress__slider-thumb");
 if (before && after && thumb) {
   var progress__btn = document.querySelectorAll(".progress__slider-button");
   progress__btn[0].addEventListener("click", function () {
@@ -49,6 +51,7 @@ if (before && after && thumb) {
     thumb.style.left = "42px";
   });
 }
+
 if (document.querySelector(".progress__input")) {
   console.log(document.querySelector(".progress__input"));
   document
