@@ -36,6 +36,7 @@
 @media (min-width: $tablet-width) {
   .adress {
     font-size: $secondary-fs;
+    background-color: $white;
   }
 
   .adress__block {
@@ -89,8 +90,8 @@
     position: absolute;
     z-index: 2;
     background-color: $white;
-    top: 87px;
-    left: 109px;
+    top: 97px;
+    left: 38px;
     padding-top: 52px;
     padding-bottom: 58px;
     padding-left: 76px;

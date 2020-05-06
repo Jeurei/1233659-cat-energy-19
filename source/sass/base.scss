@@ -18,6 +18,7 @@ body {
   font-weight: $font-normal;
   color: $color-text;
   background-color: $bg-color;
+  -ms-scroll-limit-x-max: 0;
 }
 
 a {

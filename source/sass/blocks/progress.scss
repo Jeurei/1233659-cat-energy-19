@@ -82,7 +82,7 @@
 }
 
 .progress__slider-button:active {
-  border-bottom: none;
+  border-bottom-color: transparent;
 }
 
 .progress__slider-line {
@@ -121,25 +121,25 @@
     width: 636px;
     min-height: 517px;
     position: absolute;
-    top: 0;
+    top: 6px;
     left: 5%;
     background-position: 0 0;
 
     &--before {
-      background-image: url("../img/before-tablet@1x.png"), linear-gradient(to bottom, $white 33.9%, $alt-bg-color 33.9%);
-      background-size: 636px 517px, 100% 100%;
+      background-image: url("../img/before-tablet@1x.png"), linear-gradient(to bottom, $white 32.6%, $alt-bg-color 32.6%);
+      background-size: 643px 516px, 100% 100%;
       z-index: 2;
       width: 45%;
       opacity: 1;
 
       @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-        background-image: url("../img/before-tablet@2x.png"), linear-gradient(to bottom, $white 33.9%, $alt-bg-color 33.9%);
+        background-image: url("../img/before-tablet@2x.png"), linear-gradient(to bottom, $white 32.6%, $alt-bg-color 32.6%);
       }
     }
 
     &--after {
       background-image: url("../img/after-tablet@1x.png");
-      background-size: 636px 517px;
+      background-size: 656px 517px;
       opacity: 1;
 
       @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
@@ -275,6 +275,7 @@
     width: 50%;
     padding-top: 0;
     margin-top: -124px;
+    padding-bottom: 51px;
   }
 
   .progress__image-slides {
@@ -288,7 +289,7 @@
     left: -12px;
 
     &--before {
-      background-image: url("../img/before-desktop@1x.png"), linear-gradient(to bottom, $white 33.2%, $alt-bg-color 33.2%);
+      background-image: url("../img/before-desktop@1x.png"), linear-gradient(to bottom, $white 190px, $alt-bg-color 190px);
       background-size: 636px 499px, 100%;
       height: 499px;
       width: 50%;
@@ -296,7 +297,7 @@
       background-position: -9px 0, center;
 
       @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-        background-image: url("../img/before-desktop@2x.png"), linear-gradient(to bottom, $white 33.2%, $alt-bg-color 33.2%);
+        background-image: url("../img/before-desktop@2x.png"), linear-gradient(to bottom, $white 190px, $alt-bg-color 190px);
       }
     }
 

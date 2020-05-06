@@ -1,6 +1,6 @@
 .show-more {
   border-top: 1px solid $border-color;
-  padding-top: 36px;
+  padding-top: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,6 +32,14 @@
 .show-more__button {
   background-color: $alt-bg-color;
   color: $color-text;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {

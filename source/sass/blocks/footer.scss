@@ -15,9 +15,21 @@
 
 .footer__logo-link {
   padding-bottom: 28px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .footer {
+    padding-bottom: 34px;
+  }
+
   .footer__inner {
     flex-direction: row;
     justify-content: space-between;
@@ -31,12 +43,12 @@
 
 @media (min-width: $desktop-width) {
   .footer {
-    padding-bottom: 62px;
+    padding-bottom: 30px;
     margin-top: -31px;
   }
 
   .footer__inner {
-    padding-top: 35px;
+    padding-top: 50px;
   }
 
   .footer__logo-link {

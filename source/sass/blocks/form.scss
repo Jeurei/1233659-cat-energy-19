@@ -134,6 +134,10 @@
     box-shadow: none;
   }
 
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
   &:focus {
     border: 2px solid $base-color;
   }
@@ -177,7 +181,7 @@
 
 .form__input--radio + .form__label:hover {
   &::before {
-    box-shadow: $checkable-inputs-bs;
+    border-color: #bababa;
   }
 }
 
@@ -564,7 +568,7 @@
 
 @media (min-width: $desktop-width) {
   .form {
-    padding-bottom: 98px;
+    padding-bottom: 84px;
   }
 
   .form__main-title {

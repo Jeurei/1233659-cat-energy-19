@@ -3,6 +3,7 @@
   color: $base-color;
   font-size: 20px;
   line-height: $secondary-lh;
+  overflow: hidden;
 
   .nav-list {
     display: none;
@@ -77,6 +78,19 @@
     }
   }
 
+  .header--nojs {
+    .nav-list {
+      display: flex;
+      padding-left: 93px;
+      border: none;
+      width: auto;
+      flex-direction: row;
+      flex-grow: 1;
+      justify-content: space-between;
+      margin-top: 11px;
+    }
+  }
+
   .header__link {
     background-image: url("../img/logo-tablet.svg");
     width: 174px;
@@ -100,6 +114,22 @@
     }
   }
 
+  .header--nojs {
+    .main-nav {
+      padding: 0;
+      padding-top: 53px;
+      padding-right: 110px;
+    }
+
+    .nav-list {
+      flex-grow: 0;
+      padding-left: 149px;
+      margin-right: -34px;
+      margin-top: 14px;
+      width: 50%;
+    }
+  }
+
   .header__link {
     margin-right: auto;
     margin-bottom: 0;
@@ -107,12 +137,26 @@
     width: 203px;
     height: 60px;
     background-size: 203px 60px;
-    margin-left: 110px;
+    margin-left: 40px;
   }
 
   .header--index {
     font-size: $title-h3-fs;
     line-height: $title-h3-lh;
     background: linear-gradient(to right, $white 50%, $bg-green 50%);
+
+    .header__link {
+      margin-right: auto;
+      margin-bottom: 0;
+      background-image: url("../img/logo-desktop.svg");
+      width: 203px;
+      height: 60px;
+      background-size: 203px 60px;
+      margin-left: 110px;
+    }
+
+    .main-nav {
+      padding-right: 120px;
+    }
   }
 }

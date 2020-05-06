@@ -90,6 +90,7 @@
     padding-bottom: 10px;
     padding-top: 0;
     margin-right: 26px;
+    font-weight: normal;
   }
 
   .nav-list__link--active {
@@ -113,6 +114,7 @@
     background-size: 720px 696px;
     background-repeat: no-repeat;
     background-position: 100% 0;
+    min-width: 1440px;
 
     @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
       background-image: url("../img/index-background-desktop@2x.jpg");
@@ -125,6 +127,10 @@
     margin-right: -34px;
     margin-top: 14px;
     width: 50%;
+  }
+
+  .nav-list__item {
+    padding-left: 6px;
   }
 
   .header .nav-list__link {
