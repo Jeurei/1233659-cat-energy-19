@@ -33,6 +33,7 @@
 .explanation-list__text {
   display: flex;
   flex-direction: row;
+  width: 100%;
 
   &::before {
     content: "";
@@ -120,6 +121,14 @@
     display: flex;
     margin-bottom: 133px;
     padding-right: 146px;
+    position: relative;
+
+    &:nth-child(odd) {
+      .explanation-list__text::after {
+        top: 100px;
+        left: 120px;
+      }
+    }
 
     &:nth-child(2n) {
       margin-left: auto;
@@ -128,7 +137,8 @@
       padding-right: 48px;
 
       .explanation-list__text::after {
-        left: 42%;
+        left: 145px;
+        top: 100px;
       }
     }
   }
@@ -145,7 +155,6 @@
 
   .explanation-list__text {
     flex-direction: column;
-    position: relative;
     font-size: $secondary-fs;
     line-height: 24px;
 
@@ -191,7 +200,7 @@
 
 @media (min-width: $desktop-width) {
   .explanation {
-    padding-bottom: 29px;
+    padding-bottom: 0;
   }
 
   .explanation__inner {
@@ -213,21 +222,19 @@
     margin-right: 0;
     margin-bottom: 0;
     padding-right: 0;
-
-    &:nth-child(2n) {
-      margin-left: 0;
-      margin-right: 0;
-      padding-right: 0;
-      padding-left: 0;
-    }
+    min-height: 233px;
   }
 
 
   .explanation-list__item:nth-child(even) {
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
     padding-left: 19px;
 
     .explanation-list__text::after {
-      left: 48%;
+      left: 130px;
+      top: 100px;
     }
   }
 
@@ -236,8 +243,15 @@
 
     .explanation-list__text {
       &::after {
-        left: 52%;
+        left: 153px;
+        top: 100px;
       }
+    }
+  }
+
+  .explanation-list__item:nth-child(4n) {
+    .explanation-list__text::after {
+      left: 173px;
     }
   }
 
@@ -246,7 +260,7 @@
 
     .explanation-list__text {
       &::after {
-        left: 49%;
+        left: 120px;
       }
     }
   }

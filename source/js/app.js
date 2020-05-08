@@ -53,19 +53,26 @@ if (before && after && thumb) {
 }
 
 if (document.querySelector(".progress__input")) {
-  console.log(document.querySelector(".progress__input"));
   document
     .querySelector(".progress__input")
     .addEventListener("input", function (evt) {
       var value = evt.target.value;
+      after.style.opacity=1;
+      if(value>=60){
+        after.style.opacity=0
+      }
       document.querySelector(".progress__result--before").style.width =
-        value + "%";
+        value  + "%";
     });
   document
     .querySelector(".progress__input")
     .addEventListener("change", function (evt) {
       var value = evt.target.value;
+      after.style.opacity = 1;
+      if (value >= 60) {
+        after.style.opacity = 0;
+      }
       document.querySelector(".progress__result--before").style.width =
-        value + "%";
+        value  + "%";
     });
 }

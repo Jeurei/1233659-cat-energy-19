@@ -119,6 +119,7 @@
 
 .form__input {
   border: 1px solid $border-color;
+  margin: 0;
   text-transform: uppercase;
   height: 45px;
   padding-left: 15px;
@@ -140,6 +141,7 @@
 
   &:focus {
     border: 2px solid $base-color;
+    padding-left: 18px;
   }
 
   &:invalid:not(:placeholder-shown) {
@@ -157,6 +159,7 @@
 
 .form__input-group--w-icon {
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .form__input--radio + .form__label {
@@ -178,6 +181,13 @@
   }
 }
 
+.form__input--checkbox:focus + .form__label::before {
+  outline: $outline-color;
+}
+
+.form__input--radio:focus + .form__label::before {
+  outline: $outline-color;
+}
 
 .form__input--radio + .form__label:hover {
   &::before {
@@ -238,6 +248,10 @@
   .form__input {
     padding-left: 16px;
     margin-top: 15px;
+
+    &:focus {
+      padding-left: 15px;
+    }
 
     &:first-of-type {
       margin-top: 0;
@@ -446,9 +460,19 @@
       margin-top: 5px;
     }
 
+    .form__input {
+      &:focus {
+        padding-left: 15px;
+      }
+    }
+
     &:first-of-type {
       .form__input {
         padding-left: 22px;
+
+        &:focus {
+          padding-left: 21px;
+        }
       }
     }
   }
@@ -702,6 +726,10 @@
 
     .form__input {
       padding-left: 18px;
+
+      &:focus {
+        padding-left: 17px;
+      }
     }
 
     .form__input-icon {
