@@ -76,18 +76,18 @@
   border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
   font-size: inherit;
   appearance: button;
-  border-style: none;
   padding: 0;
   padding-left: 7px;
   padding-right: 7px;
 }
 
 .progress__slider-button:hover {
-  border-bottom: 1px solid $color-text;
+  border-color: $color-text;
+  border-style: solid;
 }
 
 .progress__slider-button:active {
-  border-bottom: 1px solid transparent;
+  border-color: transparent;
 }
 
 .progress__slider-line {
@@ -290,8 +290,8 @@
       display: block;
       position: absolute;
       width: 100%;
-      height: 90%;
-      top: 30.5%;
+      height: 100vw;
+      top: 202px;
       left: 3%;
       z-index: -1;
       background: linear-gradient(to right, $alt-bg-color 50%, #eaeaea 50%);

@@ -1,333 +1,306 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <title>HTML Academy: Кэт энерджи</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.min.css" />
-    <link rel="preload" href="./fonts/oswaldregular.woff" as="font" />
-    <script src="./js/picturefill.js"></script>
-    <script src="./js/svg4everybody.min.js"></script>
-  </head>
-  <body>
-    <div style="display: none;">
-      <include src="build/img/sprite.svg"></include>
-    </div>
-    <header class="header header--index header--nojs">
-      <nav class="header__main-nav main-nav inner">
-        <a
-          class="header__link"
-          aria-label="Ссылка на главную,но так как вы и так на главной,она отключена"
-        ></a>
-        <button
-          type="button"
-          class="main-nav__toggle"
-          aria-label="Кнопка разворачивающая меню навигации"
-        ></button>
-        <h2 class="main-nav__title visually-hidden">
-          Меню навигации по сайту
-        </h2>
-        <ul class="list main-nav__nav-list nav-list">
-          <li class="nav-list__item nav-list__item--active">
-            <a
-              class="nav-list__link nav-list__link--active"
-              aria-label="Ссылка на главную,но так как в вы и так на главной,она отключена"
-              >Главная
-            </a>
-          </li>
-          <li class="nav-list__item">
-            <a
-              href="./catalog.html"
-              class="nav-list__link"
-              aria-label="Ссылка на каталог"
-              >Каталог продукции
-            </a>
-          </li>
-          <li class="nav-list__item">
-            <a
-              href="./form.html"
-              class="nav-list__link"
-              aria-label="Ссылка на страницу с формой подбора программы"
-              >Подбор программы
-            </a>
-          </li>
-        </ul>
-        <section class="homepage">
-          <div class="homepage__inner inner">
-            <h2 class="title homepage__title">
-              Функциональное питание для котов
-            </h2>
-            <p class="text homepage__text">Занялся собой? Займись котом!</p>
-            <picture>
-              <source
-                type="image/webp"
-                srcset="
+
+<head>
+  <meta charset="utf-8" />
+  <title>HTML Academy: Кэт энерджи</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.min.css" />
+  <link rel="preload" href="./fonts/oswaldregular.woff" as="font" />
+  <script src="./js/picturefill.js"></script>
+  <script src="./js/svg4everybody.min.js"></script>
+</head>
+
+<body>
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <header class="header header--index header--nojs">
+    <nav class="header__main-nav main-nav inner">
+      <a
+        class="header__link"
+        aria-label="Ссылка на главную,но так как вы и так на главной,она отключена"></a>
+      <button
+        type="button"
+        class="main-nav__toggle"
+        aria-label="Кнопка разворачивающая меню навигации"></button>
+      <h2 class="main-nav__title visually-hidden">
+        Меню навигации по сайту
+      </h2>
+      <ul class="list main-nav__nav-list nav-list">
+        <li class="nav-list__item nav-list__item--active">
+          <a
+            class="nav-list__link nav-list__link--active"
+            aria-label="Ссылка на главную,но так как в вы и так на главной,она отключена">Главная
+          </a>
+        </li>
+        <li class="nav-list__item">
+          <a
+            href="./catalog.html"
+            class="nav-list__link"
+            aria-label="Ссылка на каталог">Каталог продукции
+          </a>
+        </li>
+        <li class="nav-list__item">
+          <a
+            href="./form.html"
+            class="nav-list__link"
+            aria-label="Ссылка на страницу с формой подбора программы">Подбор программы
+          </a>
+        </li>
+      </ul>
+      <section class="homepage">
+        <div class="homepage__inner inner">
+          <h2 class="title homepage__title">
+            Функциональное питание для котов
+          </h2>
+          <p class="text homepage__text">Занялся собой? Займись котом!</p>
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
                   ./img/index-can-mobile@1x.webp 1x,
                   ./img/index-can-mobile@2x.webp 2x
-                "
-              />
-              <img
-                src="./img/index-can-mobile@1x.png"
-                srcset="./img/index-can-mobile@2x.png 2x"
-                width="280"
-                height="270"
-                alt="Our product image"
-                class="homepage__img"
-              />
-            </picture>
-            <a
-              href="./form.html"
-              class="homepage__button button"
-              aria-label="Ссылка на страницу с каталогом программ"
-              >Подобрать программу
-            </a>
-          </div>
-        </section>
-      </nav>
-    </header>
-    <main class="main">
-      <h1 class="title main__title visually-hidden">
-        Магазин питания для котов Cat Energy
-      </h1>
-      <section class="program-list">
-        <div class="program-list__inner inner">
-          <h2 class="title program-list__title visually-hidden">
-            Доступные программы
-          </h2>
-          <article class="program-list__item program program--slim">
-            <h3 class="title program__title program__title--slim">
-              Похудение
-            </h3>
-            <p class="text program__text program__text--slim">
-              Ваш кот весит больше собаки и почти утратил способность лазить по
-              деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
-              сбросить лишний вес.
-            </p>
-            <a
-              class="program__link"
-              href="./catalog.html"
-              aria-label="Ссылка на страницу c программой Slim"
-              >Каталог Slim
-            </a>
-          </article>
-          <article class="program-list__item program program--pro">
-            <h3 class="title program__title program__title--pro">
-              Набор массы
-            </h3>
-            <p class="text program__text program__text--pro">
-              Заработать авторитет среди дворовых котов и даже собак? Серия Cat
-              Energy Pro поможет вашему коту нарастить необходимые мышцы!
-            </p>
-            <a
-              class="program__link"
-              href="./catalog.html"
-              aria-label="Ссылка на страницу c программой Pro"
-              >Каталог Pro
-            </a>
-          </article>
-        </div>
-      </section>
-      <section class="explanation inner">
-        <div class="explanation__inner">
-          <h2 class="title explanation__title">Как это работает</h2>
-          <ul class="list explanation__list explanation-list">
-            <li class="explanation-list__item">
-              <p
-                class="text explanation-list__text explanation-list__text--leaf"
-              >
-                Функциональное питание содержит только полезные питательные
-                вещества.
-              </p>
-            </li>
-            <li class="explanation-list__item">
-              <p
-                class="text explanation-list__text explanation-list__text--powder"
-              >
-                Выпускается в виде порошка, который нужно лишь залить кипятком и
-                готово.
-              </p>
-            </li>
-            <li class="explanation-list__item">
-              <p
-                class="text explanation-list__text explanation-list__text--cultery"
-              >
-                Замените один-два приема обычной еды на наше функциональное
-                питание.
-              </p>
-            </li>
-            <li class="explanation-list__item">
-              <p
-                class="text explanation-list__text explanation-list__text--clock"
-              >
-                Уже через месяц наслаждайтесь изменениями к лучшему<br
-                  class="explanation__br"
-                />
-                вашего питомца!
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="demonstration">
-        <div class="demonstration__inner inner">
-          <h2 class="title demonstration__title">Живой пример</h2>
-          <div class="demonstration__descr">
-            <p class="text demonstration__text">
-              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
-              на Cat Energy&nbsp;Slim. Отличный результат без изнуряющих
-              тренировок! При этом он не менял своих привычек и по‑прежнему спит
-              по 16 часов в день.
-            </p>
-            <ul class="list demonstration__stats stats-list">
-              <li class="stats-list__item">
-                <span class="stats-list__value">5 кг</span>
-                <small class="title stats-list__subtitle">cнижение веса</small>
-              </li>
-              <li class="stats-list__item">
-                <span class="stats-list__value">60 дней</span>
-                <small class="title stats-list__subtitle"
-                  >затрачено времени</small
-                >
-              </li>
-            </ul>
-            <p class="demonstration__caption">
-              Затраты на питание:
-              <span class="demonstration__caption-price">15 000 руб.</span>
-            </p>
-          </div>
-          <div class="demonstration__progress progress">
-            <div class="progress__image-slides">
-              <ul class="list progress__slides-list">
-                <li class="progress__result progress__result--before"></li>
-                <li class="progress__result progress__result--after"></li>
-              </ul>
-            </div>
-            <div class="progress__slider-controls">
-              <button
-                class="progress__slider-button"
-                aria-label="Кнопка переключения слайдера"
-              >
-                Было
-              </button>
-              <input
-                type="range"
-                class="progress__input"
-                min="0"
-                max="100"
-                step="0.5"
-                value="48"
-              />
-              <div class="progress__slider-line">
-                <div class="progress__slider-thumb"></div>
-              </div>
-              <button
-                class="progress__slider-button"
-                aria-label="Кнопка переключения слайдера"
-              >
-                Стало
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer__adress adress">
-        <div class="adress__inner inner">
-          <div class="adress__block">
-            <h2 class="title adress__title">
-              Приглашаем к&nbsp;сотрудничеству дилеров!
-            </h2>
-            <p class="text adress__text">
-              ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8
-              <span class="adress__city">Санкт-Петербург</span>
-            </p>
-          </div>
-        </div>
-        <div class="adress__map"></div>
-      </div>
-      <div class="footer__inner inner">
-        <a
-          class="footer__logo-link"
-          aria-label="Ссылка на главную,но так как вы и так здесь она отключена"
-        >
-          <img
-            src="./img/logo-footer.svg"
-            width="128"
-            height="24"
-            alt="catenergy logo"
-          />
-        </a>
-        <ul class="list footer__socials socials-list">
-          <li class="socials-list__item">
-            <a
-              href="#"
-              class="socials-list__link social-link social-link--vk"
-              aria-label="Ссылка на нашу страницу во Вконтакте"
-            >
-              <svg
-                width="30"
-                class="social-link__icon--vk"
-                height="16"
-                fill="currentColor"
-              >
-                <use xlink:href="#icon-vk"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="socials-list__item">
-            <a
-              href="#"
-              class="socials-list__link social-link social-link--inst"
-              aria-label="Ссылка на нашу страницу в Instagram"
-            >
-              <svg
-                width="23"
-                height="23"
-                class="social-link__icon--insta"
-                fill="currentColor"
-              >
-                <use xlink:href="#icon-insta"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="socials-list__item">
-            <a
-              href="#"
-              class="socials-list__link social-link social-link--fb"
-              aria-label="Ссылка на нашу страницу в Facebook"
-            >
-              <svg
-                width="14"
-                height="28"
-                class="social-link__icon--fb"
-                fill="currentColor"
-              >
-                <use xlink:href="#icon-fb"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-        <div class="footer__copyright copyright">
+                " />
+            <img
+              src="./img/index-can-mobile@1x.png"
+              srcset="./img/index-can-mobile@2x.png 2x"
+              width="280"
+              height="270"
+              alt="Our product image"
+              class="homepage__img" />
+          </picture>
           <a
-            href="https://htmlacademy.ru/intensive/adaptive"
-            class="copyright__creator-logo"
-            aria-label="Ссылка на сайт разработчика сайта на котором вы находитесь"
-          >
-            <p class="copyright__text">HTML Academy</p>
-            <svg
-              width="40"
-              height="40"
-              class="copyright__icon"
-              fill="currentColor"
-            >
-              <use xlink:href="#icon-htmlacademy"></use>
-            </svg>
+            href="./form.html"
+            class="homepage__button button"
+            aria-label="Ссылка на страницу с каталогом программ">Подобрать программу
           </a>
         </div>
+      </section>
+    </nav>
+  </header>
+  <main class="main">
+    <h1 class="title main__title visually-hidden">
+      Магазин питания для котов Cat Energy
+    </h1>
+    <section class="program-list">
+      <div class="program-list__inner inner">
+        <h2 class="title program-list__title visually-hidden">
+          Доступные программы
+        </h2>
+        <article class="program-list__item program program--slim">
+          <h3 class="title program__title program__title--slim">
+            Похудение
+          </h3>
+          <p class="text program__text program__text--slim">
+            Ваш кот весит больше собаки и почти утратил способность лазить по
+            деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
+            сбросить лишний вес.
+          </p>
+          <a
+            class="program__link"
+            href="./catalog.html"
+            aria-label="Ссылка на страницу c программой Slim">Каталог Slim
+          </a>
+        </article>
+        <article class="program-list__item program program--pro">
+          <h3 class="title program__title program__title--pro">
+            Набор массы
+          </h3>
+          <p class="text program__text program__text--pro">
+            Заработать авторитет среди дворовых котов и даже собак? Серия Cat
+            Energy Pro поможет вашему коту нарастить необходимые мышцы!
+          </p>
+          <a
+            class="program__link"
+            href="./catalog.html"
+            aria-label="Ссылка на страницу c программой Pro">Каталог Pro
+          </a>
+        </article>
       </div>
-    </footer>
-    <script src="./js/app.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=6deaa343-00b8-4c42-b56f-c894454a66d9&lang=ru_RU&onload=initMap"></script>
-  </body>
+    </section>
+    <section class="explanation inner">
+      <div class="explanation__inner">
+        <h2 class="title explanation__title">Как это работает</h2>
+        <ul class="list explanation__list explanation-list">
+          <li class="explanation-list__item">
+            <p
+              class="text explanation-list__text explanation-list__text--leaf">
+              Функциональное питание содержит только полезные питательные
+              вещества.
+            </p>
+          </li>
+          <li class="explanation-list__item">
+            <p
+              class="text explanation-list__text explanation-list__text--powder">
+              Выпускается в виде порошка, который нужно лишь залить кипятком и
+              готово.
+            </p>
+          </li>
+          <li class="explanation-list__item">
+            <p
+              class="text explanation-list__text explanation-list__text--cultery">
+              Замените один-два приема обычной еды на наше функциональное
+              питание.
+            </p>
+          </li>
+          <li class="explanation-list__item">
+            <p
+              class="text explanation-list__text explanation-list__text--clock">
+              Уже через месяц наслаждайтесь изменениями к лучшему<br
+                class="explanation__br" />
+              вашего питомца!
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="demonstration">
+      <div class="demonstration__inner inner">
+        <h2 class="title demonstration__title">Живой пример</h2>
+        <div class="demonstration__descr">
+          <p class="text demonstration__text">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
+            на Cat Energy&nbsp;Slim. Отличный результат без изнуряющих
+            тренировок! При этом он не менял своих привычек и по‑прежнему спит
+            по 16 часов в день.
+          </p>
+          <ul class="list demonstration__stats stats-list">
+            <li class="stats-list__item">
+              <span class="stats-list__value">5 кг</span>
+              <small class="title stats-list__subtitle">cнижение веса</small>
+            </li>
+            <li class="stats-list__item">
+              <span class="stats-list__value">60 дней</span>
+              <small class="title stats-list__subtitle">затрачено времени</small>
+            </li>
+          </ul>
+          <p class="demonstration__caption">
+            Затраты на питание:
+            <span class="demonstration__caption-price">15 000 руб.</span>
+          </p>
+        </div>
+        <div class="demonstration__progress progress">
+          <div class="progress__image-slides">
+            <ul class="list progress__slides-list">
+              <li class="progress__result progress__result--before"></li>
+              <li class="progress__result progress__result--after"></li>
+            </ul>
+          </div>
+          <div class="progress__slider-controls">
+            <button
+              class="progress__slider-button"
+              aria-label="Кнопка переключения слайдера">
+              Было
+            </button>
+            <input
+              type="range"
+              class="progress__input"
+              min="0"
+              max="100"
+              step="0.5"
+              value="48" />
+            <div class="progress__slider-line">
+              <div class="progress__slider-thumb"></div>
+            </div>
+            <button
+              class="progress__slider-button"
+              aria-label="Кнопка переключения слайдера">
+              Стало
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__adress adress">
+      <div class="adress__inner inner">
+        <div class="adress__block">
+          <h2 class="title adress__title">
+            Приглашаем к&nbsp;сотрудничеству дилеров!
+          </h2>
+          <p class="text adress__text">
+            ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8
+            <span class="adress__city">Санкт-Петербург</span>
+          </p>
+        </div>
+      </div>
+      <div class="adress__map"></div>
+    </div>
+    <div class="footer__inner inner">
+      <a
+        class="footer__logo-link"
+        aria-label="Ссылка на главную,но так как вы и так здесь она отключена">
+        <img
+          src="./img/logo-footer.svg"
+          width="128"
+          height="24"
+          alt="catenergy logo" />
+      </a>
+      <ul class="list footer__socials socials-list">
+        <li class="socials-list__item">
+          <a
+            href="#"
+            class="socials-list__link social-link social-link--vk"
+            aria-label="Ссылка на нашу страницу во Вконтакте">
+            <svg
+              width="30"
+              class="social-link__icon--vk"
+              height="16"
+              fill="currentColor">
+              <use xlink:href="#icon-vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-list__item">
+          <a
+            href="#"
+            class="socials-list__link social-link social-link--inst"
+            aria-label="Ссылка на нашу страницу в Instagram">
+            <svg
+              width="23"
+              height="23"
+              class="social-link__icon--insta"
+              fill="currentColor">
+              <use xlink:href="#icon-insta"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-list__item">
+          <a
+            href="#"
+            class="socials-list__link social-link social-link--fb"
+            aria-label="Ссылка на нашу страницу в Facebook">
+            <svg
+              width="14"
+              height="28"
+              class="social-link__icon--fb"
+              fill="currentColor">
+              <use xlink:href="#icon-fb"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="footer__copyright copyright">
+        <a
+          href="https://htmlacademy.ru/intensive/adaptive"
+          class="copyright__creator-logo"
+          aria-label="Ссылка на сайт разработчика сайта на котором вы находитесь">
+          <p class="copyright__text">HTML Academy</p>
+          <svg
+            width="40"
+            height="40"
+            class="copyright__icon"
+            fill="currentColor">
+            <use xlink:href="#icon-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/app.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=6deaa343-00b8-4c42-b56f-c894454a66d9&lang=ru_RU&onload=initMap"></script>
+</body>
+
 </html>

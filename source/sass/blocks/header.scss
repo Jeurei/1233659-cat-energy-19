@@ -118,15 +118,16 @@
     .main-nav {
       padding: 0;
       padding-top: 53px;
-      padding-right: 110px;
+      padding-right: 14px;
+      padding-left: 0;
     }
 
     .nav-list {
       flex-grow: 0;
-      padding-left: 149px;
-      margin-right: -34px;
+      padding-left: 80px;
+      margin-right: 0;
       margin-top: 14px;
-      width: 50%;
+      width: 46%;
     }
   }
 
@@ -143,7 +144,14 @@
   .header--index {
     font-size: $title-h3-fs;
     line-height: $title-h3-lh;
-    background: linear-gradient(to right, $white 50%, $bg-green 50%);
+    background: url("../img/index-background-desktop@1x.jpg"), linear-gradient(to right, $white 50%, $bg-green 50%);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 726px 696px, auto;
+
+    @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
+      background-image: url("../img/index-background-desktop@2x.jpg"), linear-gradient(to right, $white 50%, $bg-green 50%);
+    }
 
     .header__link {
       margin-right: auto;

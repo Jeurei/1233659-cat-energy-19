@@ -185,10 +185,12 @@
     background: linear-gradient(to bottom, $white 215px, $alt-bg-color 215px);
     padding: 0;
     margin-top: 0;
+    overflow: hidden;
 
     &::after {
-      background: linear-gradient(to right, $alt-bg-color 72.6%, #eaeaea 72.6%);
-      height: 68.5%;
+      background: linear-gradient(to right, $alt-bg-color 70vw, #eaeaea 70vw);
+      height: 100%;
+      top: 216px;
     }
   }
 
@@ -216,6 +218,7 @@
     width: 100%;
     padding-right: 112px;
     flex-direction: row;
+    justify-content: flex-start;
     padding-left: 2px;
   }
 

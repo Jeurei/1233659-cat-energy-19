@@ -1,412 +1,369 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Форма подбора программы магазина Cat Energy</title>
-    <link rel="stylesheet" href="./css/style.min.css" />
-    <link rel="preload" href="./fonts/oswaldregular.woff" as="font" />
-    <script src="./js/picturefill.js"></script>
-    <script src="./js/svg4everybody.min.js"></script>
-  </head>
-  <body>
-    <div style="display: none;">
-      <include src="build/img/sprite.svg"></include>
-    </div>
-    <header class="header header--nojs">
-      <nav class="header__main-nav main-nav inner">
-        <a
-          href="./index.html"
-          class="header__link"
-          aria-label="Ссылка на главную"
-        >
-        </a>
-        <h2 class="main-nav__title visually-hidden">Меню навигации по сайту</h2>
-        <button
-          class="main-nav__toggle"
-          aria-label="Кнопка разворачивающая меню навигации"
-        ></button>
-        <ul class="list main-nav__nav-list nav-list">
-          <li class="nav-list__item">
-            <a
-              href="./index.html"
-              class="nav-list__link"
-              aria-label="Ссылка на главную"
-              >Главная
-            </a>
-          </li>
-          <li class="nav-list__item">
-            <a
-              href="./catalog.html"
-              class="nav-list__link nav-list__link"
-              aria-label="Ссылка на каталог"
-              >Каталог продукции
-            </a>
-          </li>
-          <li class="nav-list__item nav-list__item--active">
-            <a
-              class="nav-list__link nav-list__link--active"
-              aria-label="Ссылка на страницу с формой подбора программы,но так как вы уже на ней она отключена"
-              >Подбор программы
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main class="main">
-      <form action="#" method="POST" class="form inner">
-        <h1 class="title form__main-title">Подбор программы</h1>
-        <h2 class="title form__title visually-hidden">
-          Форма подбора программы
-        </h2>
-        <p class="form__text">
-          Заполните анкету и мы подберем программу питания для вашего кота
-        </p>
-        <div class="form__inner form__inner--row">
-          <fieldset class="form__fieldset form__fieldset--row">
-            <legend class="form__legend form__inner visually-hidden">
-              Данные питомца
-            </legend>
-            <div class="form__input-group">
-              <label for="pet-name" class="form__label">Имя:<sup>*</sup></label>
-              <input
-                type="text"
-                name="pet-name"
-                id="pet-name"
-                class="form__input"
-                required
-                placeholder="Барсик"
-                aria-describedby="pet-name-descr"
-              />
-              <p class="visually-hidden" id="pet-name-descr">
-                Напишите здесь имя питомца например:Барсик.Обязательное поле
-              </p>
-            </div>
-            <div class="form__input-group">
-              <label for="pet-weight" class="form__label"
-                >Вес (кг):<sup>*</sup></label
-              >
-              <input
-                type="text"
-                name="pet-weight"
-                id="pet-weight"
-                class="form__input"
-                required
-                placeholder="7"
-                aria-describedby="pet-weight-description"
-              />
-              <p class="visually-hidden" id="pet-weight-description">
-                Напишите здесь вес питомца в килограммах например:7.Обязательное
-                поле
-              </p>
-            </div>
-            <div class="form__input-group">
-              <label for="pet-age" class="form__label">Возраст (лет):</label>
-              <input
-                type="text"
-                name="pet-age"
-                id="pet-age"
-                class="form__input form__input--text"
-                required
-                placeholder="7"
-                aria-describedby="pet-age-description"
-              />
-              <p class="visually-hidden" id="pet-age-description">
-                Напишите здесь возраст питомца например:7
-              </p>
-            </div>
-          </fieldset>
-          <fieldset
-            class="form__fieldset form__fieldset--w-list form__fieldset--row"
-          >
-            <legend class="form__legend form__inner visually-hidden">
-              Выбор программы
-            </legend>
-            <div class="form__inner form__inner--w-list">
-              <ul class="list form__item-list">
-                <li class="form__list-item">
-                  <input
-                    type="radio"
-                    class="form__input form__input--radio visually-hidden"
-                    name="program"
-                    id="program-1"
-                    value="1"
-                    checked="checked"
-                  />
-                  <label
-                    for="program-1"
-                    class="form__label form__label--checkable"
-                    >Похудение</label
-                  >
-                </li>
-                <li class="form__list-item">
-                  <input
-                    type="radio"
-                    class="form__input form__input--radio visually-hidden"
-                    name="program"
-                    id="program-2"
-                    value="2"
-                  />
-                  <label
-                    for="program-2"
-                    class="form__label form__label--checkable"
-                    >Набор массы</label
-                  >
-                </li>
-                <li class="form__list-item">
-                  <input
-                    type="radio"
-                    class="form__input form__input--radio visually-hidden"
-                    name="program"
-                    id="program-3"
-                    value="3"
-                  />
-                  <label
-                    for="program-3"
-                    class="form__label form__label--checkable"
-                    >Не знаю (Нужен ваш совет)</label
-                  >
-                </li>
-              </ul>
-            </div>
-          </fieldset>
-        </div>
-        <div class="form__inner">
-          <fieldset class="form__fieldset">
-            <legend class="form__legend form__legend--w-70">
-              Контактные данные (владельца кота)
-            </legend>
-            <div class="form__input-group form__input-group--w-icon">
-              <div class="form__input form__input--w-icon">
-                <label for="email" class="form__label"
-                  >E-mail:<sup>*</sup>
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  class="form__input form__input--w-100"
-                  required
-                  placeholder="kuklachev@gmail.com"
-                  aria-describedby="email-description"
-                />
-                <div class="form__input-icon">
-                  <svg width="18" height="14" fill="currentColor">
-                    <use xlink:href="#icon-mail"></use>
-                  </svg>
-                </div>
-                <p class="visually-hidden" id="email-description">
-                  Напишите здесь ваш email например:kuklachev@gmail.com
-                  обязательно
-                </p>
-              </div>
-              <div class="form__input form__input--w-icon">
-                <label
-                  for="tel-num"
-                  class="form__label"
-                  aria-describedby="tel-description"
-                  >Телефон:<sup>*</sup></label
-                >
-                <input
-                  type="tel"
-                  class="form__input form__input--w-100"
-                  name="tel-num"
-                  id="tel-num"
-                  pattern="(\+?\d[- .]*){7,13}"
-                  required
-                  placeholder="8 (960) 900-60-90"
-                  aria-describedby="tel-description"
-                />
-                <div class="form__input-icon">
-                  <svg width="21" height="21" fill="currentColor">
-                    <use xlink:href="#icon-phone"></use>
-                  </svg>
-                </div>
-                <p class="visually-hidden" id="tel-description">
-                  Напишите здесь ваш контактный номер например:8 (960) 900-60-90
-                  обязательно
-                </p>
-              </div>
-            </div>
-          </fieldset>
-        </div>
 
-        <div class="form__inner">
-          <fieldset class="form__fieldset">
-            <legend class="form__legend" id="textarea__label">
-              Комментарий
-            </legend>
-            <textarea
-              name="textarea"
-              class="form__textarea"
-              placeholder="Расскажите обо всех повадках кота"
-              aria-describedby="textarea-description"
-              aria-labelledby="textarea__label"
-            ></textarea>
-            <p id="textarea-description" class="visually-hidden">
-              Расскажите обо всех повадках кота
-            </p>
-          </fieldset>
-        </div>
-        <div class="form__inner">
-          <fieldset class="form__fieldset">
-            <legend class="form__legend">
-              Дополнительно
-            </legend>
-            <ul class="list form__item-list form__item-list--row">
-              <li class="form__list-item">
-                <input
-                  type="checkbox"
-                  class="form__input form__input form__input--checkbox visually-hidden"
-                  name="addittons__checkbox"
-                  id="addititons-1"
-                  value="1"
-                  checked
-                />
-                <label
-                  for="addititons-1"
-                  class="form__label form__label--checkable"
-                  >Сахарозаменитель</label
-                >
-              </li>
-              <li class="form__list-item">
-                <input
-                  type="checkbox"
-                  class="form__input form__input form__input--checkbox visually-hidden"
-                  name="addittons__checkbox"
-                  id="addititons-2"
-                  value="2"
-                />
-                <label
-                  for="addititons-2"
-                  class="form__label form__label--checkable"
-                  >Питьевая вода</label
-                >
-              </li>
-              <li class="form__list-item">
-                <input
-                  type="checkbox"
-                  class="form__input form__input form__input--checkbox visually-hidden"
-                  name="addittons__checkbox"
-                  id="addititons-3"
-                  value="3"
-                />
-                <label
-                  for="addititons-3"
-                  class="form__label form__label--checkable"
-                  >Молоко</label
-                >
-              </li>
-              <li class="form__list-item">
-                <input
-                  type="checkbox"
-                  class="form__input form__input form__input--checkbox visually-hidden"
-                  name="addittons__checkbox"
-                  id="addititons-4"
-                  value="4"
-                />
-                <label
-                  for="addititons-4"
-                  class="form__label form__label--checkable"
-                  >Витамины</label
-                >
-              </li>
-            </ul>
-          </fieldset>
-        </div>
-        <div class="form__inner-submit-block form__inner">
-          <button class="button form__button" type="submit">
-            Отправить заявку
-          </button>
-          <small class="text form__explanation-text">
-            <sup>*</sup> — Обязательные поля</small
-          >
-        </div>
-      </form>
-    </main>
-    <footer class="footer">
-      <div class="footer__adress adress">
-        <div class="adress__inner inner">
-          <div class="adress__block">
-            <h2 class="title adress__title">
-              Приглашаем к&nbsp;сотрудничеству дилеров!
-            </h2>
-            <p class="text adress__text">
-              ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8
-              <span class="adress__city">Санкт-Петербург</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Форма подбора программы магазина Cat Energy</title>
+  <link rel="stylesheet" href="./css/style.min.css" />
+  <link rel="preload" href="./fonts/oswaldregular.woff" as="font" />
+  <script src="./js/picturefill.js"></script>
+  <script src="./js/svg4everybody.min.js"></script>
+</head>
+
+<body>
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <header class="header header--nojs">
+    <nav class="header__main-nav main-nav inner">
+      <a
+        href="./index.html"
+        class="header__link"
+        aria-label="Ссылка на главную">
+      </a>
+      <h2 class="main-nav__title visually-hidden">Меню навигации по сайту</h2>
+      <button
+        class="main-nav__toggle"
+        aria-label="Кнопка разворачивающая меню навигации"></button>
+      <ul class="list main-nav__nav-list nav-list">
+        <li class="nav-list__item">
+          <a
+            href="./index.html"
+            class="nav-list__link"
+            aria-label="Ссылка на главную">Главная
+          </a>
+        </li>
+        <li class="nav-list__item">
+          <a
+            href="./catalog.html"
+            class="nav-list__link nav-list__link"
+            aria-label="Ссылка на каталог">Каталог продукции
+          </a>
+        </li>
+        <li class="nav-list__item nav-list__item--active">
+          <a
+            class="nav-list__link nav-list__link--active"
+            aria-label="Ссылка на страницу с формой подбора программы,но так как вы уже на ней она отключена">Подбор программы
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <form action="#" method="POST" class="form inner">
+      <h1 class="title form__main-title">Подбор программы</h1>
+      <h2 class="title form__title visually-hidden">
+        Форма подбора программы
+      </h2>
+      <p class="form__text">
+        Заполните анкету и мы подберем программу питания для вашего кота
+      </p>
+      <div class="form__inner form__inner--row">
+        <fieldset class="form__fieldset form__fieldset--row">
+          <legend class="form__legend form__inner visually-hidden">
+            Данные питомца
+          </legend>
+          <div class="form__input-group">
+            <label for="pet-name" class="form__label">Имя:<sup>*</sup></label>
+            <input
+              type="text"
+              name="pet-name"
+              id="pet-name"
+              class="form__input"
+              required
+              placeholder="Барсик"
+              aria-describedby="pet-name-descr" />
+            <p class="visually-hidden" id="pet-name-descr">
+              Напишите здесь имя питомца например:Барсик.Обязательное поле
             </p>
           </div>
-        </div>
-        <div class="adress__map"></div>
+          <div class="form__input-group">
+            <label for="pet-weight" class="form__label">Вес (кг):<sup>*</sup></label>
+            <input
+              type="text"
+              name="pet-weight"
+              id="pet-weight"
+              class="form__input"
+              required
+              placeholder="7"
+              aria-describedby="pet-weight-description" />
+            <p class="visually-hidden" id="pet-weight-description">
+              Напишите здесь вес питомца в килограммах например:7.Обязательное
+              поле
+            </p>
+          </div>
+          <div class="form__input-group">
+            <label for="pet-age" class="form__label">Возраст (лет):</label>
+            <input
+              type="text"
+              name="pet-age"
+              id="pet-age"
+              class="form__input form__input--text"
+              required
+              placeholder="7"
+              aria-describedby="pet-age-description" />
+            <p class="visually-hidden" id="pet-age-description">
+              Напишите здесь возраст питомца например:7
+            </p>
+          </div>
+        </fieldset>
+        <fieldset
+          class="form__fieldset form__fieldset--w-list form__fieldset--row">
+          <legend class="form__legend form__inner visually-hidden">
+            Выбор программы
+          </legend>
+          <div class="form__inner form__inner--w-list">
+            <ul class="list form__item-list">
+              <li class="form__list-item">
+                <input
+                  type="radio"
+                  class="form__input form__input--radio visually-hidden"
+                  name="program"
+                  id="program-1"
+                  value="1"
+                  checked="checked" />
+                <label
+                  for="program-1"
+                  class="form__label form__label--checkable">Похудение</label>
+              </li>
+              <li class="form__list-item">
+                <input
+                  type="radio"
+                  class="form__input form__input--radio visually-hidden"
+                  name="program"
+                  id="program-2"
+                  value="2" />
+                <label
+                  for="program-2"
+                  class="form__label form__label--checkable">Набор массы</label>
+              </li>
+              <li class="form__list-item">
+                <input
+                  type="radio"
+                  class="form__input form__input--radio visually-hidden"
+                  name="program"
+                  id="program-3"
+                  value="3" />
+                <label
+                  for="program-3"
+                  class="form__label form__label--checkable">Не знаю (Нужен ваш совет)</label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
       </div>
-      <div class="footer__inner inner">
-        <a
-          href="./index.html"
-          class="footer__logo-link"
-          aria-label="Ссылка на главную"
-        >
-          <img
-            src="./img/logo-footer.svg"
-            width="128"
-            height="24"
-            alt="catenergy logo"
-          />
-        </a>
-        <ul class="list footer__socials socials-list">
-          <li class="socials-list__item">
-            <a
-              href="#"
-              class="socials-list__link social-link social-link--vk"
-              aria-label="Ссылка на нашу страницу во Вконтакте"
-            >
-              <svg width="30" height="16" fill="currentColor">
-                <use xlink:href="#icon-vk"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="socials-list__item">
-            <a
-              href="#"
-              class="socials-list__link social-link social-link--inst"
-              aria-label="Ссылка на нашу страницу в Instagram"
-            >
-              <svg width="23" height="23" fill="currentColor">
-                <use xlink:href="#icon-insta"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="socials-list__item">
-            <a
-              href="#"
-              class="socials-list__link social-link social-link--fb"
-              aria-label="Ссылка на нашу страницу в Facebook"
-            >
-              <svg width="14" height="28" fill="currentColor">
-                <use xlink:href="#icon-fb"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-        <div class="footer__copyright copyright">
+      <div class="form__inner">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend form__legend--w-70">
+            Контактные данные (владельца кота)
+          </legend>
+          <div class="form__input-group form__input-group--w-icon">
+            <div class="form__input form__input--w-icon">
+              <label for="email" class="form__label">E-mail:<sup>*</sup>
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form__input form__input--w-100"
+                required
+                placeholder="kuklachev@gmail.com"
+                aria-describedby="email-description" />
+              <div class="form__input-icon">
+                <svg width="18" height="14" fill="currentColor">
+                  <use xlink:href="#icon-mail"></use>
+                </svg>
+              </div>
+              <p class="visually-hidden" id="email-description">
+                Напишите здесь ваш email например:kuklachev@gmail.com
+                обязательно
+              </p>
+            </div>
+            <div class="form__input form__input--w-icon">
+              <label
+                for="tel-num"
+                class="form__label"
+                aria-describedby="tel-description">Телефон:<sup>*</sup></label>
+              <input
+                type="tel"
+                class="form__input form__input--w-100"
+                name="tel-num"
+                id="tel-num"
+                pattern="(\+?\d[- .]*){7,13}"
+                required
+                placeholder="8 (960) 900-60-90"
+                aria-describedby="tel-description" />
+              <div class="form__input-icon">
+                <svg width="21" height="21" fill="currentColor">
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
+              </div>
+              <p class="visually-hidden" id="tel-description">
+                Напишите здесь ваш контактный номер например:8 (960) 900-60-90
+                обязательно
+              </p>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="form__inner">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend" id="textarea__label">
+            Комментарий
+          </legend>
+          <textarea
+            name="textarea"
+            class="form__textarea"
+            placeholder="Расскажите обо всех повадках кота"
+            aria-describedby="textarea-description"
+            aria-labelledby="textarea__label"></textarea>
+          <p id="textarea-description" class="visually-hidden">
+            Расскажите обо всех повадках кота
+          </p>
+        </fieldset>
+      </div>
+      <div class="form__inner">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">
+            Дополнительно
+          </legend>
+          <ul class="list form__item-list form__item-list--row">
+            <li class="form__list-item">
+              <input
+                type="checkbox"
+                class="form__input form__input form__input--checkbox visually-hidden"
+                name="addittons__checkbox"
+                id="addititons-1"
+                value="1"
+                checked />
+              <label
+                for="addititons-1"
+                class="form__label form__label--checkable">Сахарозаменитель</label>
+            </li>
+            <li class="form__list-item">
+              <input
+                type="checkbox"
+                class="form__input form__input form__input--checkbox visually-hidden"
+                name="addittons__checkbox"
+                id="addititons-2"
+                value="2" />
+              <label
+                for="addititons-2"
+                class="form__label form__label--checkable">Питьевая вода</label>
+            </li>
+            <li class="form__list-item">
+              <input
+                type="checkbox"
+                class="form__input form__input form__input--checkbox visually-hidden"
+                name="addittons__checkbox"
+                id="addititons-3"
+                value="3" />
+              <label
+                for="addititons-3"
+                class="form__label form__label--checkable">Молоко</label>
+            </li>
+            <li class="form__list-item">
+              <input
+                type="checkbox"
+                class="form__input form__input form__input--checkbox visually-hidden"
+                name="addittons__checkbox"
+                id="addititons-4"
+                value="4" />
+              <label
+                for="addititons-4"
+                class="form__label form__label--checkable">Витамины</label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="form__inner-submit-block form__inner">
+        <button class="button form__button" type="submit">
+          Отправить заявку
+        </button>
+        <small class="text form__explanation-text">
+          <sup>*</sup> — Обязательные поля</small>
+      </div>
+    </form>
+  </main>
+  <footer class="footer">
+    <div class="footer__adress adress">
+      <div class="adress__inner inner">
+        <div class="adress__block">
+          <h2 class="title adress__title">
+            Приглашаем к&nbsp;сотрудничеству дилеров!
+          </h2>
+          <p class="text adress__text">
+            ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8
+            <span class="adress__city">Санкт-Петербург</span>
+          </p>
+        </div>
+      </div>
+      <div class="adress__map"></div>
+    </div>
+    <div class="footer__inner inner">
+      <a
+        href="./index.html"
+        class="footer__logo-link"
+        aria-label="Ссылка на главную">
+        <img
+          src="./img/logo-footer.svg"
+          width="128"
+          height="24"
+          alt="catenergy logo" />
+      </a>
+      <ul class="list footer__socials socials-list">
+        <li class="socials-list__item">
           <a
-            href="https://htmlacademy.ru/intensive/adaptive"
-            class="copyright__creator-logo"
-            aria-label="Ссылка на сайт разработчика сайта на котором вы находитесь"
-          >
-            <p class="copyright__text">HTML Academy</p>
-            <svg
-              width="40"
-              height="40"
-              class="copyright__icon"
-              fill="currentColor"
-            >
-              <use xlink:href="#icon-htmlacademy"></use>
+            href="#"
+            class="socials-list__link social-link social-link--vk"
+            aria-label="Ссылка на нашу страницу во Вконтакте">
+            <svg width="30" height="16" class="social-link__icon--vk" fill="currentColor">
+              <use xlink:href="#icon-vk"></use>
             </svg>
           </a>
-        </div>
+        </li>
+        <li class="socials-list__item">
+          <a
+            href="#"
+            class="socials-list__link social-link social-link--inst"
+            aria-label="Ссылка на нашу страницу в Instagram">
+            <svg width="23" height="23" class="social-link__icon--insta" fill="currentColor">
+              <use xlink:href="#icon-insta"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-list__item">
+          <a
+            href="#"
+            class="socials-list__link social-link  social-link--fb"
+            aria-label="Ссылка на нашу страницу в Facebook">
+            <svg width="14" height="28" class="social-link__icon--fb" fill="currentColor">
+              <use xlink:href="#icon-fb"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="footer__copyright copyright">
+        <a
+          href="https://htmlacademy.ru/intensive/adaptive"
+          class="copyright__creator-logo"
+          aria-label="Ссылка на сайт разработчика сайта на котором вы находитесь">
+          <p class="copyright__text">HTML Academy</p>
+          <svg
+            width="40"
+            height="40"
+            class="copyright__icon"
+            fill="currentColor">
+            <use xlink:href="#icon-htmlacademy"></use>
+          </svg>
+        </a>
       </div>
-    </footer>
-    <script src="./js/app.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=6deaa343-00b8-4c42-b56f-c894454a66d9&lang=ru_RU&onload=initMap"></script>
-  </body>
+    </div>
+  </footer>
+  <script src="./js/app.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=6deaa343-00b8-4c42-b56f-c894454a66d9&lang=ru_RU&onload=initMap"></script>
+</body>
+
 </html>
