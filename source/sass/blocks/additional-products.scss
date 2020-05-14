@@ -82,11 +82,13 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  width: 100%;
 }
 
 .additional-product-card__td {
   font-family: $alt-font;
   line-height: 16px;
+  display: flex;
 
   &:last-child {
     margin-left: auto;

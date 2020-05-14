@@ -5,9 +5,7 @@ function initMap(ymaps) {
       zoom: 17,
     }),
     myPlacemark = new ymaps.Placemark(
-      coordinates,
-      {},
-      {
+      coordinates, {}, {
         iconLayout: "default#image",
         iconImageHref: "../img/map-pin.png",
         iconImageSize: [55, 53],
@@ -29,17 +27,18 @@ var before = document.querySelector(".progress__result--before");
 var after = document.querySelector(".progress__result--after");
 var thumb = document.querySelector(".progress__slider-thumb");
 document.querySelector(".header").classList.remove("header--nojs");
+var button = document.querySelector(".main-nav__toggle");
+var nav = document.querySelector(".nav-list");
+var progress__btn = document.querySelectorAll(".progress__slider-button");
 
-document
-  .querySelector(".main-nav__toggle")
-  .addEventListener("click", function () {
-    var button = document.querySelector(".main-nav__toggle");
-    var nav = document.querySelector(".nav-list");
+if (button) {
+  button.addEventListener("click", function () {
     button.classList.toggle("main-nav__toggle--close");
     nav.classList.toggle("nav-list--active");
   });
+}
+
 if (before && after && thumb) {
-  var progress__btn = document.querySelectorAll(".progress__slider-button");
   progress__btn[0].addEventListener("click", function () {
     before.style.width = "100%";
     after.style.opacity = "0";
@@ -57,12 +56,12 @@ if (document.querySelector(".progress__input")) {
     .querySelector(".progress__input")
     .addEventListener("input", function (evt) {
       var value = evt.target.value;
-      after.style.opacity=1;
-      if(value>=60){
-        after.style.opacity=0
+      after.style.opacity = 1;
+      if (value >= 60) {
+        after.style.opacity = 0
       }
       document.querySelector(".progress__result--before").style.width =
-        value  + "%";
+        value + "%";
     });
   document
     .querySelector(".progress__input")
@@ -73,6 +72,6 @@ if (document.querySelector(".progress__input")) {
         after.style.opacity = 0;
       }
       document.querySelector(".progress__result--before").style.width =
-        value  + "%";
+        value + "%";
     });
 }

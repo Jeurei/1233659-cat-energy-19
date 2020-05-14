@@ -130,6 +130,7 @@
   flex-grow: 1;
   margin-bottom: 15px;
   cursor: pointer;
+
   // firefox
   &:required {
     box-shadow: none;
@@ -755,6 +756,11 @@
 
   .form__input--w-icon:nth-of-type(odd):last-child {
     padding-right: 0;
+
+    .form__input-icon {
+      right: 20px;
+      top: 20%;
+    }
   }
 
   .form__textarea {

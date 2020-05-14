@@ -72,7 +72,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 33%;
-    padding-top: 6px;
+    padding-top: 17px;
     padding-left: 12px;
   }
 
@@ -114,5 +114,6 @@
 @media (min-width: $desktop-width) {
   .socials-list {
     margin-bottom: 5px;
+    padding-top: 0;
   }
 }

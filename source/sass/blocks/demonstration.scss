@@ -53,6 +53,7 @@
   &:first-of-type {
     margin-right: 32px;
   }
+
   border: solid 1px $border-color;
   position: relative;
   padding-top: 15px;
@@ -117,7 +118,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      height: 44%;
+      height: 477px;
       background: linear-gradient(to right, $alt-bg-color 50%, #eaeaea 50%);
       z-index: -1;
     }
@@ -188,9 +189,7 @@
     overflow: hidden;
 
     &::after {
-      background: linear-gradient(to right, $alt-bg-color 70vw, #eaeaea 70vw);
-      height: 100%;
-      top: 216px;
+      display: none;
     }
   }
 
@@ -201,6 +200,7 @@
   .demonstration__inner {
     align-items: flex-start;
     padding-top: 78px;
+    overflow: visible;
   }
 
   .demonstration__descr {
